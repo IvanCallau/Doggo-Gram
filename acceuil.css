@@ -1,0 +1,21 @@
+/*pour toute les pages*/
+#page{
+    text-align: center;
+}
+#titre{
+    font-size: 120px;
+}
+/*pour small screen*/
+@media only screen and (max-width:570px){
+    #titre{
+    display:flex;
+    flex-wrap: wrap;
+    font-size: 60px;
+    }
+}
+/*Tout ce qui est plus grand que 570px*/
+@media only screen and (min-width:570px){
+    #titre{
+        font-size: 80px;
+        }
+}
