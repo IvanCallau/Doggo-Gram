@@ -3,67 +3,95 @@
 <html lang="fr">
 
 <head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>Doggo-Gram - Inscription User</title>
 
 <!-- Bootstrap CSS CDN -->
-
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="inscriptionUser.css" />
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 
 </head>
 
 <body>
-	<nav class="navbar navbar-default">
-		<div class="container">
-			<ul class="nav navbar-nav">
-				<li>
-					<a href="#">
-						Doggos
-					</a>
-				</li>
+	<nav class="navbar navbar-expand justify-content-center">
+		<div class="haut nav navbar-nav">
+			<div class="nav-item">
+				<a class="" href="#">
+					Doggos
+				</a>
+			</div>
 
-				<li>
-					<a href="#" class="navbar-brand navbar-nav">
-						Doggo-Gram
-					</a>
-				</li>
+			<div class="nav-item">
+				<a class="brand" href="#">
+					Doggo-Gram
+				</a>
+			</div>
 
-				<li>
-					<a href="#">
-						S'inscrire
-					</a>
-				</li>
-			</ul>
+			<div class="nav-item">
+				<a class="" href="#">
+					S'inscrire
+				</a>
+			</div>
 		</div>
 	</nav>
 
 	<div id="formulaire">
 		<form method="POST" action="">
-			<div class="inquiry">
+			<div>
 				<h3>
 					Nom:
 				</h3>
 
-				<input id="lastname" type="text" name="lastname" required>
+				<input id="lastName" type="text" name="lastname" required>
 			</div>
 
-			<div class="inquiry">
+			<div>
 				<h3>
 					Prénom:
 				</h3>
 
-				<input id="firstname" type="text" name="firstname" required>
+				<input id="firstName" type="text" name="firstname" required>
+			</div>
+
+			<div>
+				<h3>
+					Nom De Compte:
+				</h3>
+
+				<input id="accountName" type="text" name="accountName" required>
+			</div>
+
+			<div>
+				<h3>
+					Adresse éléctronique:
+				</h3>
+
+				<input id="email" type="text" name="email" required>
+			</div>
+
+			<div>
+				<h3>
+					Mot De Passe:
+				</h3>
+
+				<input id="password" type="text" name="password" required>
+			</div>
+
+			<div>
+          		<input id="create-account" type="SUBMIT" name="createprofile" value="Créer profil">
+        	</div>
+    	</form>
 	</div>
 
 <!-- jQuery CDN -->
 
-	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-
-<!-- Bootstrap Js CDN -->
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 
 </body>
 
