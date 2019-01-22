@@ -1,0 +1,43 @@
+/*pour toute les pages*/
+#page{
+    text-align: center;
+}
+#titre{
+    font-size: 120px;
+}
+#sousTitre{
+    font-size: 35px;
+}
+.button{
+    border:none;
+	padding:6px 0 6px 0;
+	border-radius:75%;
+	border-bottom:5px solid red;
+	font:13px Arial;
+	color:black;
+	background:#fff;
+	box-shadow:2px 2px 3px #999;
+    border-top:2px solid orange;
+    font-size:90px;
+    margin-top: 30px
+}
+/*pour small screen*/
+@media only screen and (max-width:570px){
+    #titre{
+    display:flex;
+    flex-wrap: wrap;
+    font-size: 60px;
+    }
+    .button{
+        font-size:30px;
+    }
+}
+/*Tout ce qui est plus grand que 570px*/
+@media only screen and (min-width:570px){
+    #titre{
+        font-size: 80px;
+        }
+        .button{
+            font-size:50px;
+        }
+}

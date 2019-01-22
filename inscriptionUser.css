@@ -1,0 +1,36 @@
+/* CSS de la page inscriptionUser.html */
+
+body {
+	text-align:center;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  body {
+  	width:100%;
+  	margin:0%;
+  	padding:0%;
+    background-color:green;
+  }
+
+  a {
+  	color:grey;
+  	text-decoration:none;
+  }
+
+  .brand {
+  	font-size:23px;
+  	color:grey;
+  }
+
+  a:hover {
+  	text-decoration:none;
+  	color:darkgrey;
+  }
+
+  .haut {
+  	background-color: lightblue;
+  }
+}
+
