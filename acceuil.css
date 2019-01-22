@@ -26,10 +26,11 @@
     #titre{
     display:flex;
     flex-wrap: wrap;
-    font-size: 60px;
+    font-size: 50px;
     }
     .button{
         font-size:30px;
+        margin-top: 20px
     }
 }
 /*Tout ce qui est plus grand que 570px*/
@@ -40,4 +41,4 @@
         .button{
             font-size:50px;
         }
-}
+    }
