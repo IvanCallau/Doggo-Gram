@@ -1,3 +1,42 @@
-.icon-bar{
+#titre{
+    text-align: center;
+    font-size: 100px;
+}
+.info{
+    display:flex;
+    margin-top:20px;
+}
+.chien{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left:20px;
+}
+.nomChien{
+    margin-left:10px;
+    margin-right:10px;
+}
+
+
+
+/*pour small screen*/
+@media only screen and (max-width:570px){
+    #titre{
+        font-size: 30px;
+    }  
+    .image{
+        width:50%;
+        height:auto;
+    }
+    .info2{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .img-responsive{
+        max-height: 130px;
+    }
+
 
 }
