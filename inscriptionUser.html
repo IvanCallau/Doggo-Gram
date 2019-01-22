@@ -2,97 +2,115 @@
 
 <html lang="fr">
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Doggo-Gram - Inscription User</title>
+		<title>Doggo-Gram - Inscription User</title>
 
-<!-- Bootstrap CSS CDN -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="inscriptionUser.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="inscriptionUser.css" />
 
 
-</head>
+	</head>
 
-<body>
-	<nav class="navbar navbar-expand justify-content-center">
-		<div class="haut nav navbar-nav">
-			<div class="nav-item">
-				<a class="" href="#">
-					Doggos
-				</a>
-			</div>
+	<body>
+		<div class="tete">
+			<nav class="navbar haut">
+				<div class="m-header container">
+						<div class="doggos">
+							<a href="#">
+								Doggos
+							</a>
+						</div>
 
-			<div class="nav-item">
-				<a class="brand" href="#">
-					Doggo-Gram
-				</a>
-			</div>
+						<div id="gram">
+							<a class="navbar-brand">
+								&nbsp&nbspDoggo-Gram
+							</a>
+						</div>
 
-			<div class="nav-item">
-				<a class="" href="#">
-					S'inscrire
-				</a>
+						<div>
+							<a href="#">
+								S'identifier
+							</a>
+						</div>
+				</div>
+			</nav>
+		</div>
+
+		</br>
+
+		<div class="page">
+			<div id="formulaire" class="container">
+				<form method="POST" action="">
+					<div class="row">
+						<div class="p-nom col-5">
+							<h3>
+								Prénom:
+							</h3>
+						</div>
+
+						<div class="nom col-offset-2 col-5">
+							<h3>
+								Nom:
+							</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<input id="firstName" class="col-5 barre" type="text" name="firstname" required>
+
+						<input id="lastName" class="col-5 barre" type="text" name="lastname" required>
+					</div>
+
+					</br>
+
+					<div>
+						<h3 class="p-nom">
+							Nom De Compte:
+						</h3>
+
+						<input id="accountName" class="barre2" type="text" name="accountName" required>
+					</div>
+
+					</br>
+					
+					<div>
+						<h3 class="p-nom">
+							Adresse éléctronique:
+						</h3>
+
+						<input id="email" class="barre2" type="text" name="email" required>
+					</div>
+
+					</br>
+					
+					<div>
+						<h3 class="p-nom">
+							Mot De Passe:
+						</h3>
+
+						<input id="password" class="barre2" type="text" name="password" required>
+					</div>
+
+					</br>
+
+					</br>
+					
+					</br>
+					
+					<div class="row">
+						<div class="col-4"></div>
+						<input id="create-account" class="col-4" type="SUBMIT" name="createprofile" value="Créer profil">
+						<div class="col-4"></div>
+					</div>
+				</form>
 			</div>
 		</div>
-	</nav>
-
-	<div id="formulaire">
-		<form method="POST" action="">
-			<div>
-				<h3>
-					Nom:
-				</h3>
-
-				<input id="lastName" type="text" name="lastname" required>
-			</div>
-
-			<div>
-				<h3>
-					Prénom:
-				</h3>
-
-				<input id="firstName" type="text" name="firstname" required>
-			</div>
-
-			<div>
-				<h3>
-					Nom De Compte:
-				</h3>
-
-				<input id="accountName" type="text" name="accountName" required>
-			</div>
-
-			<div>
-				<h3>
-					Adresse éléctronique:
-				</h3>
-
-				<input id="email" type="text" name="email" required>
-			</div>
-
-			<div>
-				<h3>
-					Mot De Passe:
-				</h3>
-
-				<input id="password" type="text" name="password" required>
-			</div>
-
-			<div>
-          		<input id="create-account" type="SUBMIT" name="createprofile" value="Créer profil">
-        	</div>
-    	</form>
-	</div>
-
-<!-- jQuery CDN -->
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-</body>
-
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous" />
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous" />
+	</body>
 </html>
