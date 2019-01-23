@@ -1,36 +1,69 @@
 /* CSS de la page inscriptionUser.html */
 
-body {
-	text-align:center;
+
+
+#gram {
+	color:#FFF;
+	padding-left:10px;
+	font-size:5px;
 }
 
-
-@media only screen and (max-width: 600px) {
-
-  body {
-  	width:100%;
-  	margin:0%;
-  	padding:0%;
-    background-color:green;
-  }
-
-  a {
-  	color:grey;
-  	text-decoration:none;
-  }
-
-  .brand {
-  	font-size:23px;
-  	color:grey;
-  }
-
-  a:hover {
-  	text-decoration:none;
-  	color:darkgrey;
-  }
-
-  .haut {
-  	background-color: lightblue;
-  }
+a {
+	color:#9D9D9D;
+	text-decoration:none;
 }
 
+a:hover {
+	text-decoration:none;
+	color:#FFF;
+}
+
+.haut {
+	background-color:#222;
+	max-width:820px;
+}
+
+@media only screen and (min-width:577px) {
+	body {
+		text-align:center;
+	    background-color:yellow;
+	}
+	.tete {
+		background-color:#222999;
+		width:100%;
+		align-items:center;
+	}
+	.haut {
+		margin:auto;
+	}
+	.page {
+		max-width:820px;
+		margin-left:auto;
+		margin-right:auto;
+		background-color:pink;
+	}
+}
+
+@media only screen and (max-width:576px) {
+	body {
+		background-color:green;
+	}
+  	.m-header {
+  		margin-top:0px;
+  		padding-left:5px;
+  		padding-right:5px;
+  	}
+	.p-nom {
+		padding-right:0px;
+		margin-left:5px;
+	}
+	.nom {
+		margin-left:15px;
+	}
+	.barre {
+		margin-left:15px;
+	}
+	.barre2 {
+		width:96%;
+	}
+}
