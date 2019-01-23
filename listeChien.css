@@ -27,28 +27,33 @@ img.img-responsive{
    max-height: 134px;
    
 }
+#tete{
+    background-color: #222;
+    width:100%;
+}
 /*pour small screen*/
 @media only screen and (max-width:570px){
     #titre{
         font-size: 30px;
-    }  
+    } 
     .info2{
         display: flex;
         flex-direction: row-reverse;
     }
 
     img.img-responsive{
-        max-height: 130px;
+        max-height: 107px;
+        max-width: 153;
         width:100%;
-        height:auto;
+        height:100%;
     }
     .form-group{
         display:flex;
         flex:flex-shrink;
-        background-color: red; 
-    
     }
-
+    .chien{
+        margin: 10%;
+    }
 }
 
 /*pour tout ce qui est plus petit que 768px*/
@@ -57,3 +62,25 @@ img.img-responsive{
         font-size: 60px;
     }  
 }
+/*pour tout ce qui est plus petit que 988px*/
+@media only screen and (max-width:988px){
+    #titre{
+        font-size: 60px;
+    }  
+}
+/*pour tout ce qui est plus grand que 572px*/
+@media only screen and (min-width:572px){
+   .barre{
+       max-width:10%;
+    }  
+    .form-group{
+        display:flex;
+        flex:flex-shrink;
+    }
+}
+/*pour tout ce qui est plus grand que 572px*/
+@media only screen and (max-width:566px){
+    .barre{
+        max-width:10%;
+     }  
+ }
