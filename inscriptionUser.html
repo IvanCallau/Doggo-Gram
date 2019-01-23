@@ -19,80 +19,68 @@
 		<div class="tete">
 			<nav class="navbar haut">
 				<div class="m-header container">
-						<div class="doggos">
-							<a href="#">
-								Doggos
-							</a>
-						</div>
+					<div class="doggos">
+						<a href="#">
+							Doggos
+						</a>
+					</div>
 
-						<div id="gram">
-							<a class="navbar-brand">
-								&nbsp&nbspDoggo-Gram
-							</a>
-						</div>
+					<div id="gram">
+						<a class="navbar-brand">
+							&nbsp&nbspDoggo-Gram
+						</a>
+					</div>
 
-						<div>
-							<a href="#">
-								S'identifier
-							</a>
-						</div>
+					<div>
+						<a href="#">
+							S'identifier
+						</a>
+					</div>
 				</div>
 			</nav>
 		</div>
 
 		</br>
 
-		<div class="page">
+		<div id="page">
 			<div id="formulaire" class="container">
 				<form method="POST" action="">
-					<div class="row">
-						<div class="p-nom col-5">
+					<div class="prenom-nom row">
+						<div id="nom" class="champs col-6 col-sm-12">
 							<h3>
-								Prénom:
+								Nom:<input id="lastName" class="barre" type="text" name="lastname" required />
 							</h3>
 						</div>
 
-						<div class="nom col-offset-2 col-5">
+						<div id="p-nom" class="champs col-6 col-sm-12">
 							<h3>
-								Nom:
+								Prénom:<input id="firstName" class="barre" type="text" name="firstname" required />
 							</h3>
 						</div>
-					</div>
-
-					<div class="row">
-						<input id="firstName" class="col-5 barre" type="text" name="firstname" required>
-
-						<input id="lastName" class="col-5 barre" type="text" name="lastname" required>
 					</div>
 
 					</br>
 
-					<div>
-						<h3 class="p-nom">
-							Nom De Compte:
+					<div class="champs col-12">
+						<h3 class="">
+							Nom De Compte:<input id="accountName" class="barre" type="text" name="accountName" required>
 						</h3>
-
-						<input id="accountName" class="barre2" type="text" name="accountName" required>
 					</div>
 
 					</br>
 					
-					<div>
-						<h3 class="p-nom">
-							Adresse éléctronique:
+					<div class="champs col-12">
+						<h3 class="">
+							Adresse éléctronique:<input id="email" class="barre" type="text" name="email" required>
 						</h3>
-
-						<input id="email" class="barre2" type="text" name="email" required>
 					</div>
 
 					</br>
 					
-					<div>
-						<h3 class="p-nom">
-							Mot De Passe:
+					<div class="champs col-12">
+						<h3 class="">
+							Mot De Passe:<input id="password" class="barre" type="text" name="password" required>
 						</h3>
-
-						<input id="password" class="barre2" type="text" name="password" required>
 					</div>
 
 					</br>
