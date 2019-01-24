@@ -47,10 +47,6 @@ img.img-responsive{
         width:100%;
         height:100%;
     }
-    .form-group{
-        display:flex;
-        flex:flex-shrink;
-    }
     .chien{
         margin: 10%;
     }
@@ -73,10 +69,7 @@ img.img-responsive{
    .barre{
        max-width:10%;
     }  
-    .form-group{
-        display:flex;
-        flex:flex-shrink;
-    }
+   
 }
 /*pour tout ce qui est plus grand que 572px*/
 @media only screen and (max-width:566px){
