@@ -29,17 +29,32 @@ a:hover {
 .barre {
 	height:30px;
 	border:solid 2px;
-
+	font-size:20px;
 }
 
-#race.barre {
+.barre {
 	background-color:white;
 }
 
+.gender {
+	font-size:1.75rem;
+	margin-top:30px;
+}
+
+.genre {
+	margin-top:-5px;
+}
+
+#bouton1, #bouton2 {
+	min-width:30px;
+	min-height:30px;
+}
+#create-account {
+	max-width:120px;
+	max-height:30px;
+}
+
 @media only screen and (min-width:768px) {
-	h3 {
-		text-align:left;
-	}
 	.tete {
 		width:100%;
 		align-items:center;
@@ -49,37 +64,52 @@ a:hover {
 	}
 	#page {
 		max-width:820px;
-		margin-top:80px;
+		margin-top:60px;
 		margin-left:auto;
 		margin-right:auto;
+		text-align:left;
 	}
 	.champs {
-		margin-left:5%;
-		max-width:700px;
+		margin-left:10%;
+		margin-right:30%;
+		justify-content:space-between;
 	}
-	#p-nom, #nom {
-		padding-left:30px;
+	.barre {
+		width:300px;
+		min-width:250px;
+		padding-left:15px;
 	}
-	#nom {
-		margin-top:10px;
+	.gender {
+	font-size:1.75rem;
+	margin-top:30px;
 	}
-	#p-nom {
-		margin-top:20px;
+	select#race {
+		margin-left:175px;
 	}
-	#lastName {
-		margin-left:210px;
-	}
-	#firstName {
+	#photo {
 		margin-left:170px;
 	}
-	#accountName {
-		margin-left:60px;
+	#surnom {
+		margin-left:145px;
 	}
-	#email {
-		margin-left:5px;
+	#elevage {
+		margin-left:55px;
 	}
-	#password {
+	.gender {
+		padding-bottom:10px;
+	}
+	.genre {
+		margin-top:-5px;
+		margin-right:100px;
+	}
+	#bouton1, #bouton2 {
+		min-width:30px;
+	}
+	#bouton1 {
 		margin-left:90px;
+	}
+	#naissance {
+		margin-left:10px;
 	}
 }
 
@@ -95,18 +125,13 @@ a:hover {
   		padding-left:5px;
   		padding-right:5px;
   	}
-	.barre{
+	.barre {
 		width:100%;
-	}
-	#nom {
-		padding-left:30px;
 	}
 	#p-nom {
 		padding-right:30px;
 	}
 	.gender {
-		font-size:1.75rem;
-		margin-top:30px;
 		display:flex;
 		justify-content:space-between;
 	}
@@ -114,8 +139,10 @@ a:hover {
 		margin-top:-5px;
 		margin-left:-20px;
 	}
-	#bouton1, #bouton2 {
-		min-width:30px;
-		min-height:30px;
+	#create-account {
+	min-width:120px;
+	min-height:30px;
+	max-width:120px;
+	max-height:30px;
 	}
 }
