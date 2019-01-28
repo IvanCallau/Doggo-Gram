@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 
 <html lang="fr">
-
 	<head>
 		<meta charset="utf-8" />
 
@@ -12,57 +11,51 @@
 		<title>Doggo-Gram - Inscription Chien</title>
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
-
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href="inscriptionChien.css" />
 
 
 	</head>
 
-	<body>
-		
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">
-				Navbar
-			</a>
+	<body>	
+		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+			<a class="navbar-brand" href="#">Doggo-Gram</a>
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="#">Profil<span class="sr-only">(current)</span></a>
 					</li>
 
-					<li class="nav-item">
-						<a class="nav-link" href="#">Link</a>
+					<li class="nav-item active ">
+						<a class="nav-link" href="#">S'inscrire</a>
+					</li>
+
+					<li class="nav-item active">
+						<a class="nav-link" href="#">S'indentifié</a>
 					</li>
 
 					<li class="nav-item dropdown">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Dropdown
-						</a>
-
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Action</a>
+							<a class="dropdown-item" href="#">Profil</a>
 
-							<a class="dropdown-item" href="#">Another action</a>
+							<a class="dropdown-item" href="#">S'inscrire</a>
 
 							<div class="dropdown-divider"></div>
-
-							<a class="dropdown-item" href="#">Something else here</a>
+								<a class="dropdown-item" href="#">S'identifié</a>
 						</div>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link disabled" href="#">Disabled</a>
 					</li>
 				</ul>
 
 				<form class="form-inline my-2 my-lg-0">
 					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-						<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+
+					<button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit"></button>
 				</form>
 			</div>
 		</nav>
@@ -80,8 +73,7 @@
 							</h3>
 						</label>
 
-
-						<select size="1" id="race" class="barre" name="race" required>
+						<select size="1" id="race" class="barre col-sm-6" name="race" required>
 							<option value="blank" selected>--Selectionner--</option>
 
 							<option value="corgi">Corgi</option>
@@ -102,35 +94,29 @@
 
 					</br>
 
-					<div class="champs col-12">
+					<div class="champs col-12 col-sm-12">
 						<h3 class="">
-							Photo:
+							Photo:<input id="photo" class="barre" type="text" name="photo" required>
 						</h3>
-
-						<input id="accountName" class="barre" type="text" name="accountName" required>
 					</div>
 
 					</br>
 					
-					<div class="champs col-12">
+					<div class="champs col-12 col-sm-12">
 						<h3 class="">
-							Surnom:
+							Surnom:<input id="surnom" class="barre col-sm-6" type="text" name="surnom" required>
 						</h3>
-
-						<input id="email" class="barre" type="text" name="email" required>
 					</div>
 
 					</br>
 					
-					<div class="champs col-12">
+					<div class="champs col-12 col-sm-12">
 						<h3 class="">
-							Nom d'élevage:
+							Nom d'élevage:<input id="elevage" class="barre" type="text" name="elevage" required>
 						</h3>
-
-						<input id="photo" class="barre" type="text" name="photo" required>
 					</div>
 
-					<div class="champs gender col-12">
+					<div class="champs gender col-12 col-sm-12">
 				        <input id="bouton1" type="radio" name="gender[]">
 							<label for="bouton1">
 								<div class="genre">
@@ -148,23 +134,22 @@
 						</input>
 					</div>
 
-					<div class="champs col-12">
+					<div class="champs col-12 col-sm-12">
 						<h3>
-							Date de naissance:
+							Date de naissance:<input id="naissance" type="date" class="barre" name="naissance" required>
 						</h3>
-							
-						<input type="date" class="barre" name="naissance" required>
 				    </div>
-					</div>
 
 					</br>
 					
 					</br>
 					
 					<div class="row">
-						<div class="col-4"></div>
-						<input id="create-account" class="col-4" type="SUBMIT" name="createprofile" value="Créer profil">
-						<div class="col-4"></div>
+						<div class="col-4 col-sm-5"></div>
+
+						<input id="create-account" class="col-4 col-sm-2" type="SUBMIT" name="createprofile" value="Créer profil">
+
+						<div class="col-4 col-sm-5"></div>
 					</div>
 				</form>
 			</div>
