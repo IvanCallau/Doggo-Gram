@@ -8,18 +8,18 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<title>Doggo-Gram - Inscription Chien</title>
+		<title>Doggo-Gram - S'Identifier</title>
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="inscriptionChien.css" />
+		<link rel="stylesheet" type="text/css" href="identifier.css" />
 
 
 	</head>
 
 	<body>	
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">Doggo-Gram</a>
+			<a class="navbar-brand" href="acceuil.html">Doggo-Gram</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,78 +67,20 @@
 			<div id="formulaire" class="container">
 				<form method="POST" action="pagePersoArticle.html">
 					<div class="champs col-12">
-						<label id="race">
+						<label id="pseudo">
 							<h3 class="">
-								Race:
+								Pseudo:<input id="pseudo" class="barre pseudo" type="text" name="photo" required>
 							</h3>
 						</label>
-
-						<select size="1" id="race" class="barre col-sm-6" name="race" required>
-							<option value="blank" selected>--Selectionner--</option>
-
-							<option value="corgi">Corgi</option>
-
-							<option value="terrier">Terrier</option>
-
-							<option value="cocker">Cocker</option>
-
-							<option value="yorkshare">Yorkshare</option>
-
-							<option value="beagle">Beagle</option>
-
-							<option value="berger">Berger</option>
-							
-							<option value="bulldog">Bulldog</option>
-						</select>
 					</div>
 
 					</br>
 
 					<div class="champs col-12 col-sm-12">
 						<h3 class="">
-							Photo:<input id="photo" class="barre" type="text" name="photo" required>
+							Mot de passe:<input id="mdp" class="barre" type="text" name="mdp" required>
 						</h3>
 					</div>
-
-					</br>
-					
-					<div class="champs col-12 col-sm-12">
-						<h3 class="">
-							Surnom:<input id="surnom" class="barre col-sm-6" type="text" name="surnom" required>
-						</h3>
-					</div>
-
-					</br>
-					
-					<div class="champs col-12 col-sm-12">
-						<h3 class="">
-							Nom d'élevage:<input id="elevage" class="barre" type="text" name="elevage" required>
-						</h3>
-					</div>
-
-					<div class="champs gender col-12 col-sm-12">
-				        <input id="bouton1" type="radio" name="gender[]">
-							<label for="bouton1">
-								<div class="genre">
-									Mâle
-								</div>
-							</label>
-						</input>
-						
-						<input id="bouton2" type="radio" name="gender[]">
-							<label for="bouton2">
-								<div class="genre">
-									Femelle
-								</div>
-							</label>
-						</input>
-					</div>
-
-					<div class="champs col-12 col-sm-12">
-						<h3>
-							Date de naissance:<input id="naissance" type="date" class="barre" name="naissance" required>
-						</h3>
-				    </div>
 
 					</br>
 					
@@ -147,7 +89,7 @@
 					<div class="row">
 						<div class="col-4 col-sm-5"></div>
 
-						<input id="create-dog" class="col-4 col-sm-2" type="SUBMIT" name="create-dog" value="Ajouter Chien">
+						<input id="create-dog" class="col-4 col-sm-2" type="SUBMIT" name="create-dog" value="Connexion">
 
 						<div class="col-4 col-sm-5"></div>
 					</div>
