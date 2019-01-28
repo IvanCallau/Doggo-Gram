@@ -1,13 +1,46 @@
 
 
 .responsive {
-    width: 70%;
+    width: 60%;
     max-height:250px;
     display: block;
-    margin: auto;
+    margin-top:40px;
+    margin-left:300px;
   }
-  #infoChien{
-      text-align: center;
-      font-size:18px;
+#infoChien{
+    text-align: center;
+    font-size:18px;
   }
- 
+
+
+/*pour small screen*/
+@media only screen and (max-width:570px){ 
+.responsive {
+    width: 100%;
+    max-height:250px;
+    display: block;
+    margin-top:40px;
+    margin-left:5px;
+    }
+#infoChien{
+    text-align: center;
+    font-size:18px;
+    display: flex;
+    flex-wrap: wrap;
+    }
+}
+@media only screen and (min-width:576px){ 
+    #infoChien{
+        text-align: center;
+        font-size:18px;
+        display: flex;
+        flex-wrap: wrap;
+        }
+        .responsive {
+            width: 100%;
+            max-height:250px;
+            display: block;
+            margin-top:40px;
+            margin-left:5px;
+            }
+}
