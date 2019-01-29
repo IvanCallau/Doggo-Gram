@@ -1,4 +1,4 @@
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 576px) {
     #main{
         width: 300px;
         margin-left: auto;
@@ -12,13 +12,19 @@
         margin: 25px;
     }
   }
-@media (min-width: 1281px) {
-  
+@media (min-width: 768px) {
+    body {
+        background-color:#E6E4E4;
+    }
+
     #main{
         margin-right: 14%;
         margin-left:12%;
         margin-top:55px;
-    }    
+        border:solid 3px;
+        padding-bottom:20px;
+        background-color:#FFF;
+    }
 
     #ecran{
         width: 190px;
