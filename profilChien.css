@@ -5,6 +5,10 @@ body{
     border: solid 1px;
     background-color:white;
 }
+#page a{
+    text-decoration:none;
+    color:black;
+}
 #image{
     margin-top:20px;  
 }
@@ -16,8 +20,7 @@ body{
     height: 3.55rem;
     font-size: 1.75rem;
     padding: 0.375rem 0;
-  
-    line-height: 1.428571429;
+    line-height: 1.25;
     border-radius:2rem;
     border: none;
     background-color: lightgrey;
