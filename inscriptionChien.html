@@ -18,54 +18,66 @@
 	</head>
 
 	<body>	
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">Doggo-Gram</a>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Doggo-Gram</a>
 
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active">
-						<a class="nav-link" href="#">Profil<span class="sr-only">(current)</span></a>
-					</li>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="profil.html">
+                            Profil<span class="sr-only">(current)</span>
+                        </a>
+                    </li>
 
-					<li class="nav-item active ">
-						<a class="nav-link" href="#">S'inscrire</a>
-					</li>
+                     <li class="nav-item active ">
+                        <a class="nav-link" href="inscriptionUser.html">
+                            S'inscrire
+                        </a>
+                    </li>
 
-					<li class="nav-item active">
-						<a class="nav-link" href="#">S'indentifié</a>
-					</li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="identifier.html">
+                            S'indentifié
+                        </a>
+                    </li>
 
-					<li class="nav-item dropdown">
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Profil</a>
+                    <li class="nav-item dropdown">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="profil.html">
+                                Profi
+                            l</a>
 
-							<a class="dropdown-item" href="#">S'inscrire</a>
+                            <a class="dropdown-item" href="inscriptionUser.html">
+                                S'inscrire
+                            </a>
 
-							<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#">S'identifié</a>
-						</div>
-					</li>
-				</ul>
+                            <div class="dropdown-divider"></div>
 
-				<form class="form-inline my-2 my-lg-0">
-					<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <a class="dropdown-item" href="identifier.html">
+                                S'identifié
+                            </a>
+                        </div>
+                    </li>
+                </ul>
 
-					<button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit"></button>
-				</form>
-			</div>
-		</nav>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+
+                    <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit"></button>
+                </form>
+            </div>
+        </nav>
 		
 
 		</br>
 
 		<div id="page">
 			<div id="formulaire" class="container">
-				<form method="POST" action="inscriptionChien.php">
+				<form method="POST" action="pagePersoArticle.html">
 					<div class="champs col-12">
 						<label id="race">
 							<h3 class="">
@@ -147,7 +159,7 @@
 					<div class="row">
 						<div class="col-4 col-sm-5"></div>
 
-						<input id="create-account" class="col-4 col-sm-2" type="SUBMIT" name="createprofile" value="Créer profil">
+						<input id="create-dog" class="col-4 col-sm-2" type="SUBMIT" name="create-dog" value="Ajouter Chien">
 
 						<div class="col-4 col-sm-5"></div>
 					</div>

@@ -1,0 +1,50 @@
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .label{
+        display: inline;   
+    }
+    .p{
+        margin-left: auto;
+        margin-right: auto;
+        display: inline;
+        position: absolute;
+        left: 57px;  
+        width: 265px; 
+        margin-left: 20px;
+    } 
+    #border{
+        border: 1px solid black;
+    }
+    .prenom{
+        margin-top: 50px;
+        margin-left: 125px;
+    }
+    .superman{
+        margin-top: 50px;
+        margin-left: 22px;
+    }
+    img{
+        position: relative;
+        height: 100px;
+        width: 100px;
+    }
+    #footer{
+        margin-top: 90px;
+    }
+    #ecran{
+        position: relative;
+        height: 100px;
+        width: 100px;
+    }
+
+    .plush_icon {
+        font-size: 100px;
+        color: #1e98af;
+        position: relative;
+        top: 31px;
+    }
+  }
+
+ 
