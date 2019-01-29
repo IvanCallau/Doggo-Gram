@@ -1,4 +1,10 @@
-
+body{
+    background-color:#E6E4E4;
+}
+#page{
+    border: solid 1px;
+    background-color:white;
+}
 #image{
     margin-top:20px;  
 }
@@ -28,7 +34,6 @@
         font-size: 15px;
     }
     .info{
-        background-color:orange;
         margin-bottom:10px;
     }
 }
@@ -40,9 +45,6 @@
     #résumé{
         font-size: 15px;
     } 
-    .info{
-        background-color:pink;
-    }
     }
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { 
@@ -52,9 +54,6 @@
     #résumé{
         font-size: 18px;
     } 
-    .info{
-        background-color:rgb(146, 8, 123);
-    }
     #photo{
         min-width: 345px;
     }
@@ -62,9 +61,6 @@
 
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) { 
-    .info{
-        background-color:blue;
-    }
     #infoChien{
         font-size: 20px;
     }
@@ -73,11 +69,8 @@
 /* Extra large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) { 
     #image{
-        margin-top:20px;
+        margin-top:30px;
         max-height:450px;
-    }
-    .info{
-        background-color:grey;
     }
     #infoChien{
         font-size: 25px;
