@@ -9,48 +9,52 @@
 
   <title>Doggo-Gram</title>
 
-  <link href="listeChien.css" rel="stylesheet">
   <!-- Bootstrap CSS CDN -->
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+    crossorigin="anonymous">
+  <link href="listeChien.css" rel="stylesheet">
 </head>
 
 <body>
-  <div class="container">
-   
-    <nav class="navbar navbar-inverse">
 
-      <div class="navbar-header col-md-4">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand">Doggo-Gram</a>
-      </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Doggo-Gram</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="col-md-4">
-        <form class="navbar-form navbar-left inline-form">
-          <div class="form-group">
-            <input type="search" class="input-sm form-control" placeholder="Recherche">
-            <button type="submit" class="btn btn-primary btn-sm"><span class="	glyphicon glyphicon-search"></span>
-            </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Profil<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active ">
+          <a class="nav-link" href="inscriptionUser.html">S'inscrire</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="identifier.html">S'indentifié</a>
+        </li>
+        <li class="nav-item dropdown">
+
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Profil</a>
+            <a class="dropdown-item" href="inscriptionUser.html">S'inscrire</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="identifier.html">S'identifié</a>
           </div>
-        </form>
-      </div>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit"></button>
+      </form>
+    </div>
+  </nav>
 
-      <div class="col-md-3-offset-1 collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user "></span> Profil</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> S'identifié</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-pencil"></span> S'inscrire</a></li>
-
-        </ul>
-      </div>
-
-    </nav>
-  
+  <div class="container">
 
     <h1 id="titre">Nos Compagnons</h1>
 
@@ -129,12 +133,14 @@
 
 
     </div>
-  </div>
-  <!-- jQuery CDN -->
-  <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
-  <!-- Bootstrap Js CDN -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
 
 </body>
 

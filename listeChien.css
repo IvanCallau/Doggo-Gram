@@ -19,18 +19,12 @@
     margin-left:10px;
     margin-right:10px;
 }
-.glyphicon-user{
-    display: none;
-}
 img.img-responsive{
    max-width: 191px;
    max-height: 134px;
    
 }
-#tete{
-    background-color: #222;
-    width:100%;
-}
+
 /*pour small screen*/
 @media only screen and (max-width:570px){
     #titre{
@@ -46,10 +40,6 @@ img.img-responsive{
         max-width: 153;
         width:100%;
         height:100%;
-    }
-    .form-group{
-        display:flex;
-        flex:flex-shrink;
     }
     .chien{
         margin: 10%;
@@ -68,19 +58,3 @@ img.img-responsive{
         font-size: 60px;
     }  
 }
-/*pour tout ce qui est plus grand que 572px*/
-@media only screen and (min-width:572px){
-   .barre{
-       max-width:10%;
-    }  
-    .form-group{
-        display:flex;
-        flex:flex-shrink;
-    }
-}
-/*pour tout ce qui est plus grand que 572px*/
-@media only screen and (max-width:566px){
-    .barre{
-        max-width:10%;
-     }  
- }
