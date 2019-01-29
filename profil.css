@@ -1,0 +1,36 @@
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .label{
+        display: inline;
+
+ 
+        
+    }
+    .p{
+        margin-left: auto;
+        margin-right: auto;
+        display: inline;
+        position: absolute;
+        left: 67px;  
+        width: 265px; 
+        margin-left: 20px;
+    } 
+    img{
+        width: 100px;
+        height: 100px;
+/*         display: block;
+        margin-left: auto;
+        margin-right: auto; */
+        margin-top: 88px;
+        position: relative;
+        left: 100px;
+    }
+    #ecran{
+        position: relative;
+        margin-left: 50px;
+        height: 100px;
+        width: 100px;
+    }
+  }
