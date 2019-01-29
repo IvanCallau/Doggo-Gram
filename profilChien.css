@@ -1,3 +1,24 @@
+
+#image{
+    margin-top:20px;  
+}
+.chien{
+    margin-top:20px;  
+}
+#plus{
+    width: 3.55rem;
+    height: 3.55rem;
+    font-size: 1.75rem;
+    padding: 0.375rem 0;
+  
+    line-height: 1.428571429;
+    border-radius:2rem;
+    border: none;
+    background-color: lightgrey;
+}
+#infoChien p span{
+    display: inline-block;
+}
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
     #titre{
@@ -44,6 +65,9 @@
     .info{
         background-color:blue;
     }
+    #infoChien{
+        font-size: 20px;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
@@ -55,14 +79,15 @@
     .info{
         background-color:grey;
     }
+    #infoChien{
+        font-size: 25px;
+    }
+    #photo{
+        min-width: 450px;
+    }
 }
-}
 
 
 
 
 
-#image{
-    margin-top:20px;
-   
-}
