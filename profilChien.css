@@ -30,9 +30,6 @@ body{
 }
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
-    #titre{
-        font-size: 20px;
-    }
     #résumé{
         font-size: 15px;
     }
@@ -42,18 +39,12 @@ body{
 }
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
-    #titre{
-        font-size: 20px;
-    }
     #résumé{
         font-size: 15px;
     } 
     }
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { 
-    #titre{
-        font-size: 30px;
-    }
     #résumé{
         font-size: 18px;
     } 

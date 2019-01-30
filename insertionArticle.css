@@ -32,10 +32,7 @@
         border-radius: 8px;
         margin: 25px;
     }
-    #meme{
-        display: inline;
-    }
-
+   
     #photo{
         width: 520px;
         margin-left: auto;
@@ -58,12 +55,7 @@
         color: black;
 
     }
-    .titre{
-        display: inline-block;
-    }
-    #titre{
-        width: 200px;
-    }
+   
 }
 
 
