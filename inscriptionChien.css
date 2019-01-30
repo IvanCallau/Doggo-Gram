@@ -44,8 +44,8 @@ a:hover {
 	min-width:30px;
 	min-height:30px;
 }
-#create-account {
-	max-width:120px;
+#create-dog {
+	max-width:128px;
 	max-height:30px;
 }
 
@@ -111,9 +111,6 @@ a:hover {
 }
 
 @media only screen and (max-width:576px) {
-	body {
-		background-color:green;
-	}
 	#formulaire {
 		margin-top:-10px;
 	}

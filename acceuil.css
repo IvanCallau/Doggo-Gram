@@ -1,6 +1,12 @@
 /*pour toute les pages*/
+
+body{
+    background-color:#E6E4E4;
+}
 #page{
-    text-align: center;
+    text-align:center;
+    margin-top:40px;
+    background-color:white;
 }
 #titre{
     font-size: 120px;
@@ -8,7 +14,7 @@
 #sousTitre{
     font-size: 35px;
 }
-.button{
+.button, .button3{
     border:none;
 	padding:6px 0 6px 0;
 	border-radius:75%;
@@ -21,24 +27,89 @@
     font-size:90px;
     margin-top: 30px
 }
+
 /*pour small screen*/
 @media only screen and (max-width:570px){
-    #titre{
-    display:flex;
-    flex-wrap: wrap;
-    font-size: 50px;
+    body{
+        background-color:white;
     }
-    .button{
+    #sousTitre{
+        font-size:30px;
+    }
+    #titre{
+        margin-top:30px;
+        flex-wrap: wrap;
+        font-size: 60px;
+    }
+    .button, .button3{
         font-size:30px;
         margin-top: 20px
     }
 }
+
 /*Tout ce qui est plus grand que 570px*/
 @media only screen and (min-width:570px){
-    #titre{
-        font-size: 80px;
-        }
-        .button{
-            font-size:50px;
-        }
+    #page{
+        border:solid 1px;
+        margin-left:15%;
+        margin-right:15%;
     }
+    #titre{
+        margin-top:20px;
+        font-size: 80px;
+    }
+    .button{
+        font-size:50px;
+    }
+    .button3{
+        font-size:50px;
+        margin-bottom:40px;
+    }
+}
+
+
+
+@media only screen and (min-width:768px){
+    #page{
+        border:solid 1px;
+        margin-left:20%;
+        margin-right:20%;
+    }
+    #titre{
+        margin-top:20px;
+        font-size: 80px;
+    }
+    .button{
+        font-size:50px;
+    }
+}
+
+@media only screen and (min-width:992px){
+    #page{
+        border:solid 1px;
+        margin-left:25%;
+        margin-right:25%;
+    }
+    #titre{
+        margin-top:20px;
+        font-size: 80px;
+    }
+    .button{
+        font-size:50px;
+    }
+}
+
+@media only screen and (min-width:1200px){
+    #page{
+        border:solid 1px;
+        margin-left:30%;
+        margin-right:30%;
+    }
+    #titre{
+        margin-top:20px;
+        font-size: 80px;
+    }
+    .button{
+        font-size:50px;
+    }
+}
