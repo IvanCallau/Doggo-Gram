@@ -9,7 +9,7 @@ class Chien {
 	private $dateNaissance;  /* dateNaissanceChien */
 	private $sexe;           /* sexeChien */
 	private $race;           /* raceChien */
-	private $photo;          /* photoChien */
+	private $photoChien;     /* photoChien */
 
 	public function __set($name, $value) {
 	}
@@ -38,8 +38,8 @@ class Chien {
 		return $this->race;
 	}
 
-	public function getPhoto() {
-		return $this->photo;
+	public function getPhotoChien() {
+		return $this->photoChien;
 	}
 }
 

@@ -2,8 +2,8 @@
 class Article{
     private $id;
     private $id_chien;
-    private $texte;
-    private $photo;
+    private $texteArticle;
+    private $photoArticle;
     private $dateParution;
     
     public function __set($name,$value){
@@ -15,11 +15,11 @@ class Article{
     public function getId_chien(){
         return $this->id_chien;
     }
-    public function getTexte(){
-        return $this->texte;
+    public function getTexteArticle(){
+        return $this->texteArticle;
     }
-    public function getPhoto(){
-        return $this->photo;
+    public function getPhotoArticle(){
+        return $this->photoArticle;
     }
     public function getdateParution(){
         return $this->dateParution;

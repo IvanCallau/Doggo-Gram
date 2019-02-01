@@ -51,9 +51,9 @@ class Connexion{
 
         $requete_prepare->execute(array("id_utilisateur" => $id_utilisateur));
 
-        $contrat = $requete_prepare->fetchObject("Contrat");
+        $resultat = $requete_prepare->fetchObject("Contrat");
 
-        return $contrat;
+        return $resultat;
     }
 
     public function getAllUtilisateurs() {

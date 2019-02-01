@@ -4,7 +4,7 @@ class Commentaire{
     private $id;
     private $id_utilisateur;
     private $id_article;
-    private $text;
+    private $textCommentaire;
     private $dateParution;
 
     public function __set($name, $value){
@@ -19,8 +19,8 @@ class Commentaire{
     public function getIdArticle(){
         return $this->id_article;
     }
-    public function getText(){
-        return $this->text;
+    public function getTextCommentaire(){
+        return $this->textCommentaire;
     }
     public function getDateParution(){
         return $this->dateParution;
