@@ -135,6 +135,15 @@ INSERT INTO `article`(
 );
 
 
+/* Article 2 Chien 1 Utilisateur 2 */
+INSERT INTO `article`(
+    `id_chien`, `texte`,
+    `dateParution`)
+    VALUES ("3", "Ponpon adore ce salir dans les flaques de boues....",
+    "2019-01-20"
+);
+    
+
 /* Commentaire d'Utilisateur 2 sur Article 1 Chien 1 d'Utilisateur 1 */
 INSERT INTO `commentaire`(
     `id_utilisateur`, `id_article`,

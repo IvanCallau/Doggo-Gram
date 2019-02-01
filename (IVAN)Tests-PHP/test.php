@@ -1,6 +1,6 @@
 <?php
 
-require('connexion.php');
+require ('connexion.php');
 $appli = new Connexion();
 
 
@@ -12,6 +12,15 @@ else {
 	echo "Connection BD échoué.</br>";
 }
 */
+
+
+$mesChiens = $appli->getMesChiens(1);
+
+foreach ($mesChiens as $chien) {
+
+	echo "<li>" . $chien . "</li></br>";
+
+}
 
 
 ?>
