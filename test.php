@@ -64,4 +64,25 @@ foreach ($mesChiens as $chien) {
 
 	//                      Fin                     //
 
+
+/* 	afficher les commentaire d'un article */
+	$commentaire = $appli->getAllCommentaire(1);
+
+	foreach($commentaire as $value){
+		echo $value->getId();
+		echo "</br>";
+		echo $value->getIdUtilisateur();
+		echo "</br>";
+		echo $value->getIdArticle();
+		echo "</br>";
+		echo $value->getTexteCommentaire();
+		echo "</br>";
+		echo $value->getDateParutionCommentaire();
+		echo "</br>";
+	}
+/* 	fin */
+
+
+
+
 ?>

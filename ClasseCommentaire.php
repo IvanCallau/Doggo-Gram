@@ -8,7 +8,7 @@ class Commentaire{
     private $dateParutionCommentaire;
 
     public function __set($name, $value){
-        void;
+        
     }
     public function getId(){
         return $this->id;

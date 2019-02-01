@@ -121,6 +121,39 @@ class Connexion{
             return $listeArticle;
     }
 
+    /* Rahmat La relation entre la table commentaire et la table article */
+
+    public function getCommentaire($id){
+        $requete = $this->connexion->prepare("
+            SELECT c.id,c.id_utilisateur,c.id_article,c.texte AS texteCommentaire,c.dateParution as dateParutionCommentaire,
+                   a.id,a.id_chien,a.texte as texteArticle,a.photo as photoArticle,a.dateParution as dateParutionArticle
+            FROM commentaire c
+            INNER JOIN article a
+            ON c.id_article = a.id
+            WHERE c.id = :idCommentaire");
+            $requete->execute(array("idCommentaire" => $id));
+
+             $commentaire = $requete->fetchObject ("Commentaire");
+ 
+            return $commentair;
+    }
+
+    public function getAllCommentaire($id){
+        $requete = $this->connexion->prepare("
+            SELECT c.id,c.id_utilisateur,c.id_article,c.texte AS texteCommentaire,c.dateParution as dateParutionCommentaire,
+                   a.id,a.id_chien,a.texte as texteArticle,a.photo as photoArticle,a.dateParution as dateParutionArticle
+            FROM commentaire c
+            INNER JOIN article a
+            ON c.id_article = a.id
+            WHERE c.id_article = :id");
+            $requete->execute(array("id" => $id));
+
+             $listecommentaire = $requete->fetchAll(PDO::FETCH_CLASS, "Commentaire");
+ 
+            return $listecommentaire;
+    }
+/*     Rahmat fin de relation entre les tables commentaire et article */ 
+
 
 
 
