@@ -9,7 +9,7 @@ class Chien {
 	private $dateNaissance;  /* dateNaissanceChien */
 	private $sexe;           /* sexeChien */
 	private $race;           /* raceChien */
-	private $photoChien;          /* photoChien */
+	private $photoChien;     /* photoChien */
 
 	public function __set($name, $value) {
 	}
@@ -23,6 +23,10 @@ class Chien {
 	}
 
 	public function getSurnom() {
+		return $this->surnom;
+	}
+
+	public function getNomElevage() {
 		return $this->nomElevage;
 	}
 
