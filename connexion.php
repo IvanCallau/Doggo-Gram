@@ -1,5 +1,10 @@
 <?php
 
+require "Chien.php";
+require "Utilisateur.php";
+require "class Article.php";
+require "ClasseCommentaire.php";
+
 class Connexion{
 
     //initialisation paramètre de connection
@@ -30,6 +35,56 @@ class Connexion{
     //récupération de la connexion
     public function getConnexion(){
         return $this->connexion;
+    }
+
+
+    public function getMesChiens($idUtilisateur) {
+
+        $requete_prepare = $this->connexion->prepare(
+            "SELECT u.id,
+            c.id as id,
+            c.id_utilisateur as id_utilisateur,
+            c.surnom as surnom,
+            c.nomElevage as nomElevage,
+            c.dateNaissance as dateNaissance,
+            c.sexe as sexe,
+            c.race as race,
+            c.photo as photoChien
+            FROM utilisateur u
+            INNER JOIN chien c ON c.id_utilisateur = u.id
+            WHERE u.id = :id");
+
+
+        $requete_prepare->execute(
+            array("id" => $idUtilisateur));
+
+        $resultat = $requete_prepare->fetchALL(PDO::FETCH_CLASS, "Chien");
+
+        return $resultat;
+    }
+
+    public function getInfosChien($idChien) {
+
+        $requete_prepare = $this->connexion->prepare(
+            "SELECT u.id,
+            c.id as id,
+            c.id_utilisateur as id_utilisateur,
+            c.surnom as surnom,
+            c.nomElevage as nomElevage,
+            c.dateNaissance as dateNaissance,
+            c.sexe as sexe,
+            c.race as race,
+            c.photo as photoChien
+            FROM utilisateur u
+            INNER JOIN chien c ON c.id_utilisateur = u.id
+            WHERE c.id = :idChien");
+
+        $requete_prepare->execute(
+            array("idChien" => $idChien));
+
+        $resultat = $requete_prepare->fetchObject("Chien");
+
+        return $resultat;
     }
 }
 
