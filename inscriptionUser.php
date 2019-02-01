@@ -42,17 +42,27 @@
 
 		<div id="page">
 			<div id="formulaire" class="container">
-				<form method="POST" action="">
+
+				<?php 
+					$duplicate = $_GET["duplicate"];
+					if($duplicate){
+						echo '<div class="alert alert-danger">
+								<strong>Pseudo duplication!</strong> Ce pseudo existe déjà.
+					  			</div>';
+					}
+				?>
+				
+			<form action="submitInscriptionUtilisateur.php" method="post" id="formID">
 					<div class="prenom-nom row">
 						<div id="nom" class="champs col-6 col-sm-12">
 							<h3>
-								Nom:<input id="lastName" class="barre" type="text" name="lastname" required />
+								Nom:<input id="lastName" class="barre" type="text" name="nom" required />
 							</h3>
 						</div>
 
 						<div id="p-nom" class="champs col-6 col-sm-12">
 							<h3>
-								Prénom:<input id="firstName" class="barre" type="text" name="firstname" required />
+								Prénom:<input id="firstName" class="barre" type="text" name="prenom" required />
 							</h3>
 						</div>
 					</div>
@@ -61,7 +71,7 @@
 
 					<div class="champs col-12">
 						<h3 class="">
-							Nom De Compte:<input id="accountName" class="barre" type="text" name="accountName" required />
+							Nom De Compte:<input id="accountName" class="barre" type="text" name="pseudo" required />
 						</h3>
 					</div>
 
@@ -69,7 +79,7 @@
 					
 					<div class="champs col-12">
 						<h3 class="">
-							Adresse éléctronique:<input id="email" class="barre" type="text" name="email" required />
+							Adresse éléctronique:<input id="email" class="barre" type="text" name="mail" required />
 						</h3>
 					</div>
 
@@ -77,7 +87,7 @@
 					
 					<div class="champs col-12">
 						<h3 class="">
-							Mot De Passe:<input type="password" id="password" class="barre" name="password" minlength="8" required />
+							Mot De Passe:<input type="password" id="password" class="barre" name="motDePasse" minlength="8" required />
 						</h3>
 					</div>
 
@@ -89,7 +99,9 @@
 					
 					<div class="row">
 						<div class="col-4"></div>
-						<input id="create-account" class="col-4" type="SUBMIT" name="createprofile" value="Créer profil" />
+							<!-- boutton de validation-envoie formulaire BDD !--> 
+						<input id="create-account" class="col-4" type="submit" name="createprofile" value="Créer profil" />
+					
 						<div class="col-4"></div>
 					</div>
 				</form>
