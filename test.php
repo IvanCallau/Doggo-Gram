@@ -48,6 +48,20 @@ foreach ($mesChiens as $chien) {
 
 }
 
+
 //                      Fin                     //
+
+	/*Afficher les article d'un chien*/
+	$article = $appli->getAllArticle(3);
+
+	foreach ($article as $value){
+	echo $value->getId()." <br />";
+	echo $value->getId_chien()."<br />";
+	echo $value->getTexteArticle()."<br />";
+	echo $value->getPhotoArticle()."<br />";
+	echo $value->getdateParutionArticle()."<br />";
+	}
+
+	//                      Fin                     //
 
 ?>
