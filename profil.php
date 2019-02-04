@@ -1,93 +1,22 @@
 <?php
 
-$id = $_GET["id"];
+include "Header.php";
 
 ?>
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <title>Doggo-Gram - Profil</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
-        crossorigin="anonymous">
     <link rel="stylesheet" href="profil.css">
 
-    <?php 
-     //  inclut le contenu d'un autre fichier appelé, et provoque une erreur bloquante s'il est indisponible
-    require('connexion.php');
- 
-    // appel de mes fonctions qui se trouvent dans mon fichier "connexion.php"
-    $appli = new Connexion();
-    $personne = $appli->selectPersonneById($_GET["id"]);//($_GET["id"])=récupération de l'id en BDD
-    $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
-    ?>
+<?php 
+ //  inclut le contenu d'un autre fichier appelé, et provoque une erreur bloquante s'il est indisponible
+require('connexion.php');
 
-</head>
-
-<body>
-    <!-- le debut de navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Doggo-Gram</a>
-
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="profil.php">
-                        Profil<span class="sr-only">(current)</span>
-                    </a>
-                </li>
-
-                <li class="nav-item active ">
-                    <a class="nav-link" href="inscriptionUser.php?duplicate=0">
-                        S'inscrire
-                    </a>
-                </li>
-
-                <li class="nav-item active">
-                    <a class="nav-link" href="identifier.php">
-                        S'indentifié
-                    </a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="profil.php">
-                            Profil</a>
-
-                        <a class="dropdown-item" href="inscriptionUser.php?duplicate=0">
-                            S'inscrire
-                        </a>
-
-                        <div class="dropdown-divider"></div>
-
-                        <a class="dropdown-item" href="identifier.php">
-                            S'identifié
-                        </a>
-                    </div>
-                </li>
-            </ul>
-
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-
-                <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit"></button>
-            </form>
-        </div>
-    </nav>
-    <!-- Fin de Navbar -->
+$id = $_GET["id"];
+// appel de mes fonctions qui se trouvent dans mon fichier "connexion.php"
+$appli = new Connexion();
+$personne = $appli->selectPersonneById($_GET["id"]);//($_GET["id"])=récupération de l'id en BDD
+$utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
+?>
 
 
     <div class="container">

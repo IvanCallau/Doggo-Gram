@@ -204,6 +204,30 @@ class Connexion{
         return $id;
     }
 
+// Fonction d'insertion de nouveau Chien.
+    public function insertChien($id_utilisateur, $surnom, $nomElevage, $dateNaissance, $sexe, $race, $photo) {
+
+        $requete_prepare = $this->connexion->prepare(
+            "INSERT INTO chien
+            (id_utilisateur, surnom, nomElevage, dateNaissance, sexe, race, photo)
+            VALUES
+            (:id_utilisateur, :surnom, :nomElevage, :dateNaissance, :sexe, :race, :photo)");
+            
+        $requete_prepare->execute(
+            array('id_utilisateur' => $id_utilisateur,
+                'surnom' => $surnom,
+                'nomElevage' => $nomElevage,
+                'dateNaissance' => $dateNaissance,
+                'sexe' => $sexe,
+                'race' => $race,
+                'photo' => $photo));
+
+        $id = $this->connexion->lastInsertId();
+
+        return $id;
+    }
+
+
     public function isLoginExists($login){
         //preparer la requete en base de donnée
         $stmt = $this->connexion->prepare(
