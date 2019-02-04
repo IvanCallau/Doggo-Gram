@@ -45,4 +45,6 @@ $id = $appli->insertPersonne($nom,$prenom,$pseudo,$email,$mdp_hash);
 var_dump($id);
 echo "connexion réussie";
 
+header ("Location:http://127.0.1.17//projets/Doggo-Gram/profil.php?id=$id");
+    exit();
 ?>

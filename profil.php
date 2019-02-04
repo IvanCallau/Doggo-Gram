@@ -20,6 +20,16 @@ $id = $_GET["id"];
         crossorigin="anonymous">
     <link rel="stylesheet" href="profil.css">
 
+    <?php 
+     //  inclut le contenu d'un autre fichier appelé, et provoque une erreur bloquante s'il est indisponible
+    require('connexion.php');
+ 
+    // appel de mes fonctions qui se trouvent dans mon fichier "connexion.php"
+    $appli = new Connexion();
+    $personne = $appli->selectPersonneById($_GET["id"]);//($_GET["id"])=récupération de l'id en BDD
+    $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
+    ?>
+
 </head>
 
 <body>
@@ -87,9 +97,12 @@ $id = $_GET["id"];
                 <div class="row">
                     <div class="col-2">
                         <p>Nom: </p>
+                       
                     </div>
                     <div class="col-7  ml-3 mr-2">
-                        <p class="test">Akaba</p>
+                        
+                        <p> <?php echo($utilisateur->getNom()." "); ?> </p>
+                       
                     </div>
                     <div class="col-2"><i style="cursor:pointer;" class="fas fa-pencil-alt modifier"></i></div>
                 </div>
@@ -99,7 +112,9 @@ $id = $_GET["id"];
                         <p>Prenom: </p>
                     </div>
                     <div class="col-7  ml-3 mr-2">
-                        <p class="test">jeneffer</p>
+                        
+                      <p>  <?php echo($utilisateur->getPrenom()." "); ?> </p>
+                    
                     </div>
                     <div class="col-2"><i style="cursor:pointer;" class="fas fa-pencil-alt modifier"></i></div>
                 </div>
@@ -109,7 +124,9 @@ $id = $_GET["id"];
                         <p>Pseudo: </p>
                     </div>
                     <div class="col-7  ml-3 mr-2">
-                        <p class="test">sharazade</p>
+
+                        <p> <?php echo($utilisateur->getPseudo()." "); ?> </p>
+
                     </div>
                     <div class="col-2"><i style="cursor:pointer;" class="fas fa-pencil-alt modifier"></i></div>
                 </div>
@@ -119,7 +136,9 @@ $id = $_GET["id"];
                         <p>Email: </p>
                     </div>
                     <div class="col-7  ml-3 mr-2">
-                        <p class="test">sharazade@yahoo.com</p>
+
+                    <p>  <?php echo($utilisateur->getMail()." "); ?> </p>
+
                     </div>
                     <div class="col-2"><i style="cursor:pointer;" class="fas fa-pencil-alt modifier"></i></div>
                 </div>

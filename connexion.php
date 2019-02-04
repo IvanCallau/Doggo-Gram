@@ -87,6 +87,30 @@ class Connexion{
         return $resultat;
     }
 
+    //récupérer les données de l'utilisateur
+    public function getInfosUtilisateur($id_utilisateur) {
+        $requete_prepare = $this->connexion->prepare(
+            "SELECT u.nom, u.prenom, u.pseudo, u.mail
+            FROM utilisateur u
+            WHERE u.id = :id");
+
+        $requete_prepare->execute(array("id"=> $id_utilisateur));
+
+        $resultat=$requete_prepare->fetchObject("Utilisateur");  
+
+        return $resultat;
+    }
+
+    //visualiser-afficher toutes les informations de la personne
+    public function displayPersonne($utilisateur){
+        $str = $utillisateur->getNom()." "
+                .$utillisateur->getPrenom()." "
+                .$utillisateur->getPseudo()." "
+                .$utillisateur->getMail()." ";
+        
+        echo $str;
+    }
+
     //récupération l'article par son id
     public function getArticle($id){
         $requete_prepare = $this->connexion->prepare(
@@ -100,10 +124,8 @@ class Connexion{
         $requete_prepare ->execute(array("idArticle" => $id));
         $article = $requete_prepare->fetchObject('Article');
             
-            return $article;
+        return $article;
     }
-
-
 
     //récupération tous les articles
     public function getAllArticle($id){
@@ -212,6 +234,18 @@ class Connexion{
         return false;
     }
 
+    //selectionner les personne par leur ID
+    public function selectPersonneById( $id){
+       
+    $requete_prepare=$this->connexion -> prepare(
+        "SELECT * FROM Personne WHERE Id = :id");
+
+    $requete_prepare ->execute (array("id"=>$id));
+
+    $resultat=$requete_prepare->fetch(PDO::FETCH_OBJ);
+
+    return $resultat;
+}
 
 
 
