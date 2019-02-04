@@ -1,3 +1,12 @@
+<?php
+
+require "connexion.php";
+
+$appli = new Connexion();
+
+
+?>
+
 <!DOCTYPE html>
 
 <html lang="fr">
@@ -78,7 +87,7 @@
 		
 		<div id="page">
 			<div id="formulaire" class="container">
-				<form method="POST" action="pagePersoArticle.html">
+				<form method="POST" action="enregistrementChien.php">
 					<div class="champs col-12">
 						<label id="race">
 							<h3 class="">
@@ -89,51 +98,19 @@
 						<select size="1" id="race" class="barre col-sm-6 " name="race" required>
 							<option value="blank" selected>--Selectionner--</option>
 
-							<option value="corgi">Corgi</option>
+							<option value="Corgi">Corgi</option>
 
-							<option value="terrier">Terrier</option>
+							<option value="Terrier">Terrier</option>
 
-							<option value="cocker">Cocker</option>
+							<option value="Cocker">Cocker</option>
 
-							<option value="yorkshare">Yorkshare</option>
+							<option value="Yorkshare">Yorkshare</option>
 
-							<option value="beagle">Beagle</option>
+							<option value="Beagle">Beagle</option>
 
-							<option value="berger">Berger</option>
+							<option value="Berger">Berger</option>
 							
-							<option value="bulldog">Bulldog</option>
-
-					
-
-							<option value="corgi">Corgi</option>
-
-							<option value="terrier">Terrier</option>
-
-							<option value="cocker">Cocker</option>
-
-							<option value="yorkshare">Yorkshare</option>
-
-							<option value="beagle">Beagle</option>
-
-							<option value="berger">Berger</option>
-							
-							<option value="bulldog">Bulldog</option>
-
-						
-
-							<option value="corgi">Corgi</option>
-
-							<option value="terrier">Terrier</option>
-
-							<option value="cocker">Cocker</option>
-
-							<option value="yorkshare">Yorkshare</option>
-
-							<option value="beagle">Beagle</option>
-
-							<option value="berger">Berger</option>
-							
-							<option value="bulldog">Bulldog</option>
+							<option value="Bulldog">Bulldog</option>
 						</select>
 					</div>
 
@@ -162,7 +139,7 @@
 					</div>
 
 					<div class="champs gender col-12 col-sm-12">
-				        <input id="bouton1" type="radio" name="gender[]">
+				        <input id="bouton1" type="radio" name="gender" value="Mâle">
 							<label for="bouton1">
 								<div class="genre">
 									Mâle
@@ -170,7 +147,7 @@
 							</label>
 						</input>
 						
-						<input id="bouton2" type="radio" name="gender[]">
+						<input id="bouton2" type="radio" name="gender" value="Femelle">
 							<label for="bouton2">
 								<div class="genre">
 									Femelle
