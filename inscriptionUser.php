@@ -18,7 +18,7 @@
 			<nav class="navbar haut">
 				<div class="m-header container">
 					<div class="doggos">
-						<a href="listeChien.html">
+						<a href="listeChien.php">
 							Doggos
 						</a>
 					</div>
@@ -30,7 +30,7 @@
 					</div>
 
 					<div>
-						<a href="identifier.html">
+						<a href="identifier.php">
 							S'identifier
 						</a>
 					</div>

@@ -29,36 +29,36 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="profil.html">
+                <a class="nav-link" href="profil.php">
                     Profil<span class="sr-only">(current)</span>
                 </a>
             </li>
 
              <li class="nav-item active ">
-                <a class="nav-link" href="inscriptionUser.html">
+                <a class="nav-link" href="inscriptionUser.php">
                     S'inscrire
                 </a>
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="identifier.html">
+                <a class="nav-link" href="identifier.php">
                     S'indentifié
                 </a>
             </li>
 
             <li class="nav-item dropdown">
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="profil.html">
+                    <a class="dropdown-item" href="profil.php">
                         Profi
                     l</a>
 
-                    <a class="dropdown-item" href="inscriptionUser.html">
+                    <a class="dropdown-item" href="inscriptionUser.php">
                         S'inscrire
                     </a>
 
                     <div class="dropdown-divider"></div>
 
-                    <a class="dropdown-item" href="identifier.html">
+                    <a class="dropdown-item" href="identifier.php">
                         S'identifié
                     </a>
                 </div>
@@ -79,7 +79,7 @@
 
     <div class="chien">
 
-    <a href="profilChien.html">
+    <a href="profilChien.php">
       <div class="info">
         <div class="image">
           <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
@@ -91,7 +91,7 @@
       </div>
     </a>
 
-    <a href="profilChien.html">
+    <a href="profilChien.php">
       <div class="info info2">
         <div class="image">
           <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
@@ -103,7 +103,7 @@
       </div>
     </a>
 
-    <a href="profilChien.html">
+    <a href="profilChien.php">
       <div class="info">
         <div class="image">
           <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
@@ -115,7 +115,7 @@
       </div>
     </a>
 
-    <a href="profilChien.html">
+    <a href="profilChien.php">
       <div class="info info2">
         <div class="image">
           <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
@@ -127,7 +127,7 @@
       </div>
     </a>
 
-    <a href="profilChien.html">
+    <a href="profilChien.php">
       <div class="info">
         <div class="image">
           <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
@@ -139,7 +139,7 @@
       </div>
     </a>
 
-    <a href="profilChien.html">
+    <a href="profilChien.php">
       <div class="info info2 ">
         <div class="image">
           <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
@@ -151,7 +151,7 @@
       </div>
     </a>
 
-    <a href="profilChien.html">
+    <a href="profilChien.php">
       <div class="info">
         <div class="image">
           <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
@@ -163,7 +163,7 @@
       </div>
     </a>
 
-    <a href="profilChien.html">
+    <a href="profilChien.php">
       <div class="info info2 ">
         <div class="image">
           <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">

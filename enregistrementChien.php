@@ -1,8 +1,8 @@
 <?php
 
-require "connexion.php";
+require "/home/cf/projets/(IVAN)Tests-PHP/Connexion.php";
 
-$appliBD = new Connexion();
+$appli = new Connexion();
 
 $id = $_GET["id"];
 
@@ -19,6 +19,8 @@ echo "$race </br> $photo </br> $surnom </br> $elevage </br> $sexe </br> $naissan
 
 
 $nouvChien = $appli->insertChien($id, $surnom, $elevage, $naissance, $sexe, $race, $photo);
+
+var_dump($_GET);
 /*
 // Crée le nouvel utilisateur dans le tableau Personne et récupère son ID.
 $nouvelId = $appliBD->insertPersonne($lastname, $firstname, $photo, $anniversaire, $status);
@@ -49,7 +51,7 @@ foreach ($relationType as $personeId => $personeRelation) {
 }
 */
 // Envoie directement vers la page profil en donnant l'ID du nouvel utilisateur comme valeur dans le lien.
-header("Location: /Doggo-Gram/profilChien.html?id=$nouvelId", true, 303);
+header("Location: /Doggo-Gram/profilChien.php?id=$nouvChien", true, 303);
 
 exit;
 

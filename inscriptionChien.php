@@ -1,6 +1,8 @@
 <?php
 
-require "connexion.php";
+require "/home/cf/projets/(IVAN)Tests-PHP/Connexion.php";
+
+$id = $_GET["id"];
 
 $appli = new Connexion();
 
@@ -37,36 +39,36 @@ $appli = new Connexion();
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="profil.html">
+                        <a class="nav-link" href="profil.php">
                             Profil<span class="sr-only">(current)</span>
                         </a>
                     </li>
 
                      <li class="nav-item active ">
-                        <a class="nav-link" href="inscriptionUser.html">
+                        <a class="nav-link" href="inscriptionUser.php">
                             S'inscrire
                         </a>
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="identifier.html">
+                        <a class="nav-link" href="identifier.php">
                             S'indentifié
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="profil.html">
+                            <a class="dropdown-item" href="profil.php">
                                 Profi
                             l</a>
 
-                            <a class="dropdown-item" href="inscriptionUser.html">
+                            <a class="dropdown-item" href="inscriptionUser.php">
                                 S'inscrire
                             </a>
 
                             <div class="dropdown-divider"></div>
 
-                            <a class="dropdown-item" href="identifier.html">
+                            <a class="dropdown-item" href="identifier.php">
                                 S'identifié
                             </a>
                         </div>
@@ -87,7 +89,7 @@ $appli = new Connexion();
 		
 		<div id="page">
 			<div id="formulaire" class="container">
-				<form method="POST" action="enregistrementChien.php">
+				<form method="POST" action="enregistrementChien.php?id=2">
 					<div class="champs col-12">
 						<label id="race">
 							<h3 class="">
