@@ -155,6 +155,62 @@ class Connexion{
 /*     Rahmat fin de relation entre les tables commentaire et article */ 
 
 
+  //insertion Information de l'utilisateur dans BDD
+  public function insertPersonne($nom, $prenom,$pseudo,$mail,$motDePasse){
+    $succes = true;
+    try{
+        $requete_prepare = $this->connexion -> prepare(
+            "INSERT INTO  utilisateur (nom, prenom, pseudo, mail, motDePasse)
+                    VALUES (:nom,:prenom,:pseudo,:mail,:motDePasse)");
+
+        $requete_prepare->execute(
+            array(  "nom" =>$nom, 
+                    "prenom" =>$prenom, 
+                    "pseudo" =>$pseudo, 
+                    "mail" =>$mail, 
+                    "motDePasse" =>$motDePasse)
+        );
+
+
+         //Récupération de l'ID de la dernière insertion
+         $id = $this->connexion->lastInsertId();
+
+        }catch(Exception $e){
+            echo "Erreur:".$e -> getMessage()."<br>";
+            $succes = false;
+        }
+        return $id;
+    }
+
+    public function isLoginExists($login){
+        //preparer la requete en base de donnée
+        $stmt = $this->connexion->prepare(
+            "SELECT * FROM utilisateur WHERE pseudo = :pseudo"
+        );
+        //exécuter la requête en lui passant le paramètre
+        $stmt->execute(array("pseudo"=>$login));
+        $nbFound = $stmt->rowCount();
+        
+        if($nbFound > 0){
+            return true;
+        }
+        return false;
+    }
+
+    public function isMailExists($login){
+        //preparer la requete en base de donnée
+        $stmt = $this->connexion->prepare(
+            "SELECT * FROM utilisateur WHERE mail = :mail"
+        );
+        //exécuter la requête en lui passant le paramètre
+        $stmt->execute(array("mail"=>$login));
+        $nbFound = $stmt->rowCount();
+        
+        if($nbFound > 0){
+            return true;
+        }
+        return false;
+    }
 
 
 

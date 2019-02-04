@@ -24,19 +24,19 @@
 
     </br>
 
-    <a href="listeChien.html">
+    <a href="listeChien.php">
       <button type="button" class="button">Doggos</button>
     </a>
 
     </br>
 
-    <a href="inscriptionUser.html">
+    <a href="inscriptionUser.php">
       <button type="button" class="button">S'inscrire</button>
     </a>
 
     </br>
 
-    <a href="identifier.html">
+    <a href="identifier.php">
       <button type="button" class="button3">S'identifier</button>
     </a>
   </div>
