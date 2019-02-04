@@ -197,7 +197,20 @@ class Connexion{
         return false;
     }
 
-
+    public function isMailExists($login){
+        //preparer la requete en base de donnée
+        $stmt = $this->connexion->prepare(
+            "SELECT * FROM utilisateur WHERE mail = :mail"
+        );
+        //exécuter la requête en lui passant le paramètre
+        $stmt->execute(array("mail"=>$login));
+        $nbFound = $stmt->rowCount();
+        
+        if($nbFound > 0){
+            return true;
+        }
+        return false;
+    }
 
 
 

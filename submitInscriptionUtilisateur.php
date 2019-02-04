@@ -5,8 +5,13 @@ require_once('connexion.php');
 $appli = new Connexion();
 
 $pseudo = $_POST["pseudo"];
-
 if($appli->isLoginExists($pseudo)){
+    header ("Location:http://127.0.1.17//projets/Doggo-Gram/inscriptionUser.php?duplicate=true");
+    exit();
+}
+
+$mail = $_POST["mail"];
+if($appli->isMailExists($mail)){
     header ("Location:http://127.0.1.17//projets/Doggo-Gram/inscriptionUser.php?duplicate=true");
     exit();
 }

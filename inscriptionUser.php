@@ -42,12 +42,20 @@
 
 		<div id="page">
 			<div id="formulaire" class="container">
-
-				<?php 
+			
+				<?php
+					/*alerte si pseudo déjà utilisé*/
 					$duplicate = $_GET["duplicate"];
 					if($duplicate){
 						echo '<div class="alert alert-danger">
 								<strong>Pseudo duplication!</strong> Ce pseudo existe déjà.
+					  			</div>';
+					}
+					/*alerte si mail déjà utilisé*/
+					$duplicate1 = $_GET["duplicate1"];
+					if($duplicate1){
+						echo '<div class="alert alert-danger">
+								<strong>Mail duplication!</strong> Ce mail existe déjà.
 					  			</div>';
 					}
 				?>
