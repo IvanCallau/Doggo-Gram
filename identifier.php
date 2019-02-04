@@ -19,7 +19,7 @@
 
 	<body>	
 		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
-			<a class="navbar-brand" href="acceuil.html">Doggo-Gram</a>
+			<a class="navbar-brand" href="acceuil.php">Doggo-Gram</a>
 
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 			aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,35 +29,35 @@
 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="profil.html">
+						<a class="nav-link" href="profil.php">
 							Profil<span class="sr-only">(current)</span>
 						</a>
 					</li>
 
 					<li class="nav-item active ">
-						<a class="nav-link" href="inscriptionUser.html">
+						<a class="nav-link" href="inscriptionUser.php">
 							S'inscrire
 						</a>
 					</li>
 
 					<li class="nav-item active">
-						<a class="nav-link" href="identifier.html">
+						<a class="nav-link" href="identifier.php">
 							S'indentifier
 						</a>
 					</li>
 
 					<li class="nav-item dropdown">
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="profil.html">
+							<a class="dropdown-item" href="profil.php">
 								Profil
 							</a>
 
-							<a class="dropdown-item" href="inscriptionUser.html">
+							<a class="dropdown-item" href="inscriptionUser.php">
 								S'inscrire
 							</a>
 
 							<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="identifier.html">
+								<a class="dropdown-item" href="identifier.php">
 									S'identifier
 								</a>
 						</div>
@@ -77,7 +77,7 @@
 
 		<div id="page">
 			<div id="formulaire" class="container">
-				<form method="POST" action="pagePersoArticle.html">
+				<form method="POST" action="pagePersoArticle.php">
 					<div class="champs col-12">
 						<label id="pseudo">
 							<h3 class="">

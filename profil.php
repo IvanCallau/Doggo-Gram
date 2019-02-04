@@ -1,4 +1,10 @@
+<?php
+
+$id = $_GET["id"];
+
+?>
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -29,35 +35,35 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="profil.html">
+                    <a class="nav-link" href="profil.php">
                         Profil<span class="sr-only">(current)</span>
                     </a>
                 </li>
 
                 <li class="nav-item active ">
-                    <a class="nav-link" href="inscriptionUser.html">
+                    <a class="nav-link" href="inscriptionUser.php">
                         S'inscrire
                     </a>
                 </li>
 
                 <li class="nav-item active">
-                    <a class="nav-link" href="identifier.html">
+                    <a class="nav-link" href="identifier.php">
                         S'indentifié
                     </a>
                 </li>
 
                 <li class="nav-item dropdown">
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="profil.html">
+                        <a class="dropdown-item" href="profil.php">
                             Profil</a>
 
-                        <a class="dropdown-item" href="inscriptionUser.html">
+                        <a class="dropdown-item" href="inscriptionUser.php">
                             S'inscrire
                         </a>
 
                         <div class="dropdown-divider"></div>
 
-                        <a class="dropdown-item" href="identifier.html">
+                        <a class="dropdown-item" href="identifier.php">
                             S'identifié
                         </a>
                     </div>
@@ -127,18 +133,18 @@
             <!-- fin de la partie Noms avec button de valider -->
             
             <div class= "text-center">
-                <a href="inscriptionChien.html" id="boutonRond">
+                <a href="inscriptionChien.php?id=$id" id="boutonRond">
                     <span class="fas fa-plus-circle"></span>
                 </a>
            </div>
 
             <div class="row">
                 <div class="col md-auto text-center grandir mt-4">
-                    <a href="profilChien.html">
+                    <a href="profilChien.php">
                         <img src="imageDePageProfil.jpg" alt="image" width="130x" class="m-1">
                     </a>
 
-                    <a href="profilChien.html">
+                    <a href="profilChien.php">
                         <img src="imageDePageProfil.jpg" alt="image" width="130x" class="m-1">
                     </a>
                 </div>
@@ -175,9 +181,9 @@
 
         $(".modifier").click(function () {
 
-            var h = $(this).parents(".row").children(".col-7").children(".test").html();
+            var h = $(this).parents(".row").children(".col-7").children(".test").php();
             $(this).parents(".row").children(".col-7").children(".test").remove();
-            $(this).parents(".row").children(".col-7").html("<input type=text value='" + h + "'>");
+            $(this).parents(".row").children(".col-7").php("<input type=text value='" + h + "'>");
             $(this).remove();
 
 
