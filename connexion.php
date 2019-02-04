@@ -142,12 +142,20 @@ class Connexion{
             
             return $listeArticle;
     }
+     //visualiser-afficher tous les articles
+     public function displayArticle($article){
+        $str = $article->getTexteArticle()." "
+                .$article->getPhotoArticle()." "
+                .$article->getDateParutionArticle()." ";
+        
+        echo $str;
+    }
 
     /* Rahmat La relation entre la table commentaire et la table article */
 
     public function getCommentaire($id){
-        $requete = $this->connexion->prepare("
-            SELECT c.id,c.id_utilisateur,c.id_article,c.texte AS texteCommentaire,c.dateParution as dateParutionCommentaire,
+        $requete = $this->connexion->prepare(
+            "SELECT c.id,c.id_utilisateur,c.id_article,c.texte AS texteCommentaire,c.dateParution as dateParutionCommentaire,
                    a.id,a.id_chien,a.texte as texteArticle,a.photo as photoArticle,a.dateParution as dateParutionArticle
             FROM commentaire c
             INNER JOIN article a
@@ -160,9 +168,10 @@ class Connexion{
             return $commentaire;
     }
 
+   
     public function getAllCommentaire($id){
-        $requete = $this->connexion->prepare("
-            SELECT c.id,c.id_utilisateur,c.id_article,c.texte AS texteCommentaire,c.dateParution as dateParutionCommentaire,
+        $requete = $this->connexion->prepare(
+           "SELECT c.id,c.id_utilisateur,c.id_article,c.texte AS texteCommentaire,c.dateParution as dateParutionCommentaire,
                    a.id,a.id_chien,a.texte as texteArticle,a.photo as photoArticle,a.dateParution as dateParutionArticle
             FROM commentaire c
             INNER JOIN article a
@@ -174,6 +183,17 @@ class Connexion{
  
             return $listecommentaire;
     }
+
+
+    //visualiser-afficher toutes les commentaires de l'article
+    public function displayCommentaire($commentaire){
+        $str = $commentaire->getTexteCommentaire()." "
+                .$commentaire->getDateParutionCommentaire()." ";
+                
+        echo $str;
+    }
+
+
 /*     Rahmat fin de relation entre les tables commentaire et article */ 
 
 
@@ -226,7 +246,6 @@ class Connexion{
 
         return $id;
     }
-
 
     public function isLoginExists($login){
         //preparer la requete en base de donnée

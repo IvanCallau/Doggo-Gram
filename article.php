@@ -8,6 +8,11 @@ $appli = new Connexion();
 
 include "Header.php";
 
+$appli = new Connexion();
+//récupération de l'article dans BDD
+$article = $appli ->getArticle($_GET["id"]);
+//récupération des commentaires dans BDD
+$commentaire = $appli ->getAllCommentaire($_GET["id"]);
 ?>
 
     <title>Doggo-Gram - Page Article</title>
@@ -19,13 +24,19 @@ include "Header.php";
         </div>
 
         <div class="ecran">
-            <h4 class="font-weight-bold">
-                Title
-            </h4>
-
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia, porro libero itaque voluptatem iusto voluptas dolores consequuntur eaque eum aliquam, aut veniam id officiis, quo sapiente totam quisquam inventore quos beatae quae est odio ipsum repellat. Enim omnis atque aspernatur?
-            </p>
+           
+            <p> 
+                <?php  
+         
+                     echo '<img class="icon" src="'.$article->getPhotoArticle().'" alt="photo profil">'; 
+          				
+                    echo $article->getTexteArticle(). "</br>"
+                    .$article->getDateParutionArticle(); 
+                    
+        
+                ?> 
+           </p>
+            
 
             <section class="well">
                 <div class="form-group">
@@ -35,6 +46,8 @@ include "Header.php";
 
                     <textarea class="form-control " rows="3" id="comment"></textarea>
 
+                   
+
                     <div class="text-right">
                         <button type="button" class="btn btn-primary">
                             Valider
@@ -42,16 +55,34 @@ include "Header.php";
                     </div>
                 </div>
 
-                <div class="input-group">
-                    <p>
-                        Pseudo: les commentaire
-                    </p>
-                </div>
-                <div class="text-right">
-                    <p>
-                        date: 22/1/2019
-                    </p>
-                </div>
+                <?php
+                 foreach ($commentaire as $value){
+
+                echo '<div class="input-group">';
+                    echo '<p>';
+                   
+                    
+                   
+                    
+                       echo $value->getTexteCommentaire().'</br>';
+              
+                            		
+                    
+
+                    
+                    echo '</p>';
+                echo '</div>';
+                echo '<div class="text-right">';
+                   echo '<p>'; 
+                   
+                
+                    echo $value->getDateParutionCommentaire().'</br>';
+                    
+                    
+                   echo '</p>';
+                echo '</div>';
+                 }
+                 ?>
             </section>  
         </div>
 
