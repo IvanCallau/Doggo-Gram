@@ -24,36 +24,36 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="profil.html">
+                        <a class="nav-link" href="profil.php">
                             Profil<span class="sr-only">(current)</span>
                         </a>
                     </li>
 
                      <li class="nav-item active ">
-                        <a class="nav-link" href="inscriptionUser.html">
+                        <a class="nav-link" href="inscriptionUser.php?duplicate=0">
                             S'inscrire
                         </a>
                     </li>
 
                     <li class="nav-item active">
-                        <a class="nav-link" href="identifier.html">
+                        <a class="nav-link" href="identifier.php">
                             S'indentifié
                         </a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="profil.html">
+                            <a class="dropdown-item" href="profil.php">
                                 Profi
                             l</a>
 
-                            <a class="dropdown-item" href="inscriptionUser.html">
+                            <a class="dropdown-item" href="inscriptionUser.php?duplicate=0">
                                 S'inscrire
                             </a>
 
                             <div class="dropdown-divider"></div>
 
-                            <a class="dropdown-item" href="identifier.html">
+                            <a class="dropdown-item" href="identifier.php">
                                 S'identifié
                             </a>
                         </div>
@@ -63,7 +63,7 @@
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
-                    <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit"></button>
+                    <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit></button>
                 </form>
             </div>
         </nav>

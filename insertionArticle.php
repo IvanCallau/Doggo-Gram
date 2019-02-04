@@ -31,7 +31,7 @@
                     </li>
 
                      <li class="nav-item active ">
-                        <a class="nav-link" href="inscriptionUser.php">
+                        <a class="nav-link" href="inscriptionUser.php?duplicate=0">
                             S'inscrire
                         </a>
                     </li>
@@ -47,7 +47,7 @@
                             <a class="dropdown-item" href="profil.php">
                                 Profil</a>
 
-                            <a class="dropdown-item" href="inscriptionUser.php">
+                            <a class="dropdown-item" href="inscriptionUser.php?duplicate=0">
                                 S'inscrire
                             </a>
 

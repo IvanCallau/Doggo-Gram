@@ -45,7 +45,7 @@ $appli = new Connexion();
                     </li>
 
                      <li class="nav-item active ">
-                        <a class="nav-link" href="inscriptionUser.php">
+                        <a class="nav-link" href="inscriptionUser.php?duplicate=0">
                             S'inscrire
                         </a>
                     </li>
@@ -62,7 +62,7 @@ $appli = new Connexion();
                                 Profi
                             l</a>
 
-                            <a class="dropdown-item" href="inscriptionUser.php">
+                            <a class="dropdown-item" href="inscriptionUser.php?duplicate=0">
                                 S'inscrire
                             </a>
 
@@ -78,7 +78,7 @@ $appli = new Connexion();
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
 
-                    <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit"></button>
+                    <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit></button>
                 </form>
             </div>
         </nav>

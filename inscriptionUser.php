@@ -51,6 +51,7 @@
 								<strong>Compte existant!</strong> Ce nom de compte existe déjà.
 					  		 </div>';
 					}
+					/*alerte si mail déjà utilisé*/
 					if($duplicate==2){
 						echo '<div class="alert alert-danger">
 								<strong>Email existant!</strong> Cet email existe déjà.
