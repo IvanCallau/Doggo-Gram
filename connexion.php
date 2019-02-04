@@ -135,7 +135,7 @@ class Connexion{
 
              $commentaire = $requete->fetchObject ("Commentaire");
  
-            return $commentair;
+            return $commentaire;
     }
 
     public function getAllCommentaire($id){

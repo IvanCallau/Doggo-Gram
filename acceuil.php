@@ -30,7 +30,7 @@
 
     </br>
 
-    <a href="inscriptionUser.php">
+    <a href="inscriptionUser.php?duplicate=0">
       <button type="button" class="button">S'inscrire</button>
     </a>
 

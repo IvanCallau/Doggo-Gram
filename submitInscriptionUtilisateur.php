@@ -4,15 +4,17 @@
 require_once('connexion.php');
 $appli = new Connexion();
 
+// redirection sur inscriptionUser si pseudo déjà utilisé
 $pseudo = $_POST["pseudo"];
 if($appli->isLoginExists($pseudo)){
-    header ("Location:http://127.0.1.17//projets/Doggo-Gram/inscriptionUser.php?duplicate=true");
+    header ("Location:http://127.0.1.17//projets/Doggo-Gram/inscriptionUser.php?duplicate=1");
     exit();
 }
 
+// redirection sur inscriptionUser si mail déjà utilisé
 $mail = $_POST["mail"];
 if($appli->isMailExists($mail)){
-    header ("Location:http://127.0.1.17//projets/Doggo-Gram/inscriptionUser.php?duplicate=true");
+    header ("Location:http://127.0.1.17//projets/Doggo-Gram/inscriptionUser.php?duplicate=2");
     exit();
 }
 

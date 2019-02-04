@@ -46,17 +46,15 @@
 				<?php
 					/*alerte si pseudo déjà utilisé*/
 					$duplicate = $_GET["duplicate"];
-					if($duplicate){
+					if($duplicate==1){
 						echo '<div class="alert alert-danger">
-								<strong>Pseudo duplication!</strong> Ce pseudo existe déjà.
-					  			</div>';
+								<strong>Compte existant!</strong> Ce nom de compte existe déjà.
+					  		 </div>';
 					}
-					/*alerte si mail déjà utilisé*/
-					$duplicate1 = $_GET["duplicate1"];
-					if($duplicate1){
+					if($duplicate==2){
 						echo '<div class="alert alert-danger">
-								<strong>Mail duplication!</strong> Ce mail existe déjà.
-					  			</div>';
+								<strong>Email existant!</strong> Cet email existe déjà.
+					  		 </div>';
 					}
 				?>
 				
