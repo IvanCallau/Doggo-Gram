@@ -332,6 +332,22 @@ class Connexion{
         return $id;
     }
 
+
+    // Fonction d'insertion d'un nouveau commentaire.
+    public function insertCommentaire($id_article,$texteCommentaire, $dateParutionCommentaire) {
+
+        $requete_prepare = $this->connexion->prepare(
+            "INSERT INTO commentaire (id_article,texte, dateParution)
+            VALUES (:id_article,:texteCommentaire, :dateParutionCommentaire)"
+            );
+            
+        $requete_prepare->execute(
+            array('texteCommentaire' => $texteCommentaire,
+                'dateParutionCommentaire' => $dateParutionCommentaire,
+                'id_article' =>$id_article)
+            );
+    }
+
     //Fonction pour savoir si login exist afin d'avoir un pseudo unique
     public function isLoginExists($login){
         //preparer la requete en base de donnée

@@ -13,6 +13,7 @@ $appli = new Connexion();
 $article = $appli ->getArticle($_GET["id"]);
 //récupération des commentaires dans BDD
 $commentaire = $appli ->getAllCommentaire($_GET["id"]);
+
 ?>
 
     <title>Doggo-Gram - Page Article</title>
@@ -20,40 +21,40 @@ $commentaire = $appli ->getAllCommentaire($_GET["id"]);
     <link rel="stylesheet" href="article.css">
 
         <div class="container-fluid text-center">
-            <img src="dogOnWater.jpg" alt="dogImg" class="img-thumbnail">
+
+        <?php   echo '<img class="icon" src="'.$article->getPhotoArticle().'" alt="photo profil">';  ?>
+
         </div>
 
         <div class="ecran">
            
             <p> 
                 <?php  
-         
-                     echo '<img class="icon" src="'.$article->getPhotoArticle().'" alt="photo profil">'; 
-          				
-                    echo $article->getTexteArticle(). "</br>"
-                    .$article->getDateParutionArticle(); 
+          			
+                    echo '<p class="text-center">'.$article->getTexteArticle().'</p>'. "</br>"
+                        .'<p class="text-right">' .$article->getDateParutionArticle().'</p>'; 
                     
-        
                 ?> 
            </p>
             
-
+           <form method="post" action=<?php echo "submitCommentaire.php?id=".$id ?>>
             <section class="well">
                 <div class="form-group">
                     <label for="comment"  class="text-left">
                         Comment:
                     </label>
 
-                    <textarea class="form-control " rows="3" id="comment"></textarea>
+                    <textarea name="texteCommentaire" class="form-control " rows="3" id="comment"></textarea>
 
                    
 
                     <div class="text-right">
-                        <button type="button" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary">
                             Valider
                         </button>
                     </div>
                 </div>
+                </form>
 
                 <?php
                  foreach ($commentaire as $value){
