@@ -7,6 +7,7 @@ $appli = new Connexion();
 $id = $_GET["id"];
 
 $infosChien = $appli->getInfosChien($id);
+$articles = $appli->getAllArticle($id);
 
 include "Header.php";
 
@@ -37,70 +38,46 @@ include "Header.php";
         </div>
 
         <div class="chien">
-
-        <a href="article.php">
-            <div class="info row">
-                <div class="image  col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                    <img id="photo" src="doggy.jpeg" class="img-fluid" alt="petit chiot">
-                </div>
-        
-                <div class="nomChien col align-self-start text-center">
-                    <h3 id="titre">Doggy mon petit lion</h3>
-                    <p id ="résumé" >Aujourd'hui Doggy a grandi ,il a fait son premier rugissement....</p>
-                </div>
-            </div>  
-        </a>
-
-        <a href="article.php">
-            <div class="info row">
-
-                <div class="image col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                    <img id="photo" src="doggy.jpeg" class="img-fluid" alt="petit chiot">
-                </div>
-
-                <div class="nomChien col order-first order-lg-last text-center ">
-                    <h3 id="titre">Paddy chez le vétérinaire!</h3>
-                    <p id ="résumé">Oh mon paddy est aujourd'hui chez le vétérinaire pour subir une opération et je stresse au max....</p>
-                </div>
-
-            </div>
-        </a>
+            <?php
 
 
-        <a href="article.php">
-            <div class="info row">
 
-                <div class="image col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                    <img id="photo" src="doggy.jpeg" class="img-fluid" alt="petit chiot">
-                </div>
-        
-                <div class="nomChien  col align-self-start text-center">
-                    <h3 id="titre">Doggy mon petit lion</h3>
-                    <p id ="résumé" >La peur est une émotion qui sert à l’origine à survivre. 
-                            Elle est donc indispensable, que ce soit pour nous, ou pour nos chiens. 
-                            C’est donc un système d’alarme qui nous permet de se mettre en sécurité.
-                            Cette émotion complexe peut varier de manifestation, mais aussi d’intensité selon les individus.
-                            On ne le répète jamais […]</p>
-                </div>
+            $row = 0;
+
+            foreach ($articles as $article) {
+
+                $row += 1;
+
+                if ($row % 2 == 0) {
+                    echo '<a href="article.php">
+                            <div class="info row">
+
+                                <div class="image col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
+                                    <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
+                                </div>
+
+                                <div class="nomChien col order-first order-lg-last text-center ">
+                                    <p id ="résumé">' . $article->getTexteArticle() . '</p>
+                                </div>
+
+                            </div>
+                        </a>';
+                }
+                else {
+                    echo '<a href="article.php">
+                            <div class="info row">
+                                <div class="image  col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
+                                    <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
+                                </div>
                     
-            </div> 
-        </a> 
-    
-        <a href="article.php">
-            <div class="info row">
-        
-                <div class="image col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                    <img id="photo" src="doggy.jpeg" class="img-fluid" alt="petit chiot">
-                </div>
-                
-                <div class="nomChien col order-first order-lg-last text-center">
-                    <h3 id="titre">Paddy chez le vétérinaire!</h3>
-                    <p id ="résumé">Oh mon paddy est aujourd'hui chez le vétérinaire pour subir une opération et je stresse au max....</p>
-                </div>
-        
-            </div>
-        </a>
-
+                                <div class="nomChien col align-self-start text-center">
+                                    <p id ="résumé" >' . $article->getTexteArticle() . '</p>
+                                </div>
+                            </div>  
+                        </a>';
+                }
+            }
+            ?>     
     </div>
 
 <?php
