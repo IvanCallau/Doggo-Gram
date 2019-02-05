@@ -4,7 +4,9 @@
     border-radius: 50%;
     margin-bottom:10px;
 }
-
+#valider{
+    visibility: hidden;
+}
 @media (min-width: 320px) and (max-width: 480px) {
     
     

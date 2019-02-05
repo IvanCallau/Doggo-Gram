@@ -73,7 +73,7 @@ $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
                 </div>
                 <div class="row mt-3">
                     <div class="col md-auto text-center">
-                        <button class="btn btn-success btn-md">valider</button>
+                        <button  disabled id="valider" class="btn btn-success btn-md">valider</button>
                     </div>
                 </div>
 
@@ -111,9 +111,6 @@ $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
         </form>
     </div>
 
-
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
@@ -124,16 +121,18 @@ $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
 
 
 
+
     <script>
 
 
         $(".modifier").click(function () {
 
-            var h = $(this).parents(".row").children(".col-7").children(".test").php();
-            $(this).parents(".row").children(".col-7").children(".test").remove();
-            $(this).parents(".row").children(".col-7").php("<input type=text value='" + h + "'>");
+            var h = $(this).parents(".row").children(".col-7").children(".mr-2 p").html();
+            $(this).parents(".row").children(".col-7").children(".mr-2 p").remove();
+            $(this).parents(".row").children(".col-7").html("<input type=text value='" + h + "'>");
             $(this).remove();
-
+            $("#valider").css('visibility','visible');
+            $("#valider").removeAttr("disabled");
 
         });
 
@@ -141,6 +140,8 @@ $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
 
 
     </script>
+
+
 
 </body>
 
