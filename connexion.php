@@ -224,7 +224,92 @@ class Connexion{
         return $id;
     }
 
-// Fonction d'insertion de nouveau Chien.
+    // modifier le nom de la personne dans BDD
+    public function modifierNomPersonne($id,$nom){
+        $succes = true;
+        try{
+            $requete_prepare = $this->connexion -> prepare(
+                "UPDATE  utilisateur 
+                 SET nom=:nom
+                 WHERE id=:id");
+
+            $requete_prepare->execute(
+                array(  "id"=>$id,
+                        "nom" =>$nom)
+            );
+
+            }catch(Exception $e){
+                echo "Erreur:".$e -> getMessage()."<br>";
+                $succes = false;
+            }
+           return $succes;
+        }
+
+
+    // modifier le prenom de la personne dans BDD
+    public function modifierPrenomPersonne($id,$prenom){
+        $succes = true;
+        try{
+            $requete_prepare = $this->connexion -> prepare(
+                "UPDATE  utilisateur 
+                 SET prenom=:prenom
+                 WHERE id=:id");
+
+            $requete_prepare->execute(
+                array(  "id"=>$id,
+                        "prenom" =>$prenom)
+            );
+
+            }catch(Exception $e){
+                echo "Erreur:".$e -> getMessage()."<br>";
+                $succes = false;
+            }
+           return $succes;
+        }
+
+        // modifier le pseudo de la personne dans BDD
+        public function modifierPseudoPersonne($id,$pseudo){
+            $succes = true;
+            try{
+                $requete_prepare = $this->connexion -> prepare(
+                    "UPDATE  utilisateur 
+                     SET pseudo=:pseudo
+                     WHERE id=:id");
+    
+                $requete_prepare->execute(
+                    array(  "id"=>$id,
+                            "pseudo" =>$pseudo)
+                );
+    
+                }catch(Exception $e){
+                    echo "Erreur:".$e -> getMessage()."<br>";
+                    $succes = false;
+                }
+               return $succes;
+            }
+
+            //modifier le mail de la personne dans BDD
+            public function modifierMailPersonne($id,$mail){
+                $succes = true;
+                try{
+                    $requete_prepare = $this->connexion -> prepare(
+                        "UPDATE  utilisateur 
+                         SET mail=:mail
+                         WHERE id=:id");
+        
+                    $requete_prepare->execute(
+                        array(  "id"=>$id, 
+                                "mail" =>$mail)
+                    );
+        
+                    }catch(Exception $e){
+                        echo "Erreur:".$e -> getMessage()."<br>";
+                        $succes = false;
+                    }
+                   return $succes;
+                }
+
+    // Fonction d'insertion de nouveau Chien.
     public function insertChien($id_utilisateur, $surnom, $nomElevage, $dateNaissance, $sexe, $race, $photo) {
 
         $requete_prepare = $this->connexion->prepare(
@@ -247,6 +332,7 @@ class Connexion{
         return $id;
     }
 
+    //Fonction pour savoir si login exist afin d'avoir un pseudo unique
     public function isLoginExists($login){
         //preparer la requete en base de donnée
         $stmt = $this->connexion->prepare(
@@ -262,6 +348,7 @@ class Connexion{
         return false;
     }
 
+    //Fonction pour savoir si login exist afin d'avoir un pseudo unique
     public function isMailExists($login){
         //preparer la requete en base de donnée
         $stmt = $this->connexion->prepare(

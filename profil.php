@@ -10,18 +10,20 @@ include "Header.php";
 <?php 
  //  inclut le contenu d'un autre fichier appelé, et provoque une erreur bloquante s'il est indisponible
 require('connexion.php');
-
 $id = $_GET["id"];
+
 // appel de mes fonctions qui se trouvent dans mon fichier "connexion.php"
 $appli = new Connexion();
 $personne = $appli->selectPersonneById($_GET["id"]);//($_GET["id"])=récupération de l'id en BDD
-$utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
+$utilisateur = $appli ->getInfosUtilisateur($_GET["id"]);
+
 ?>
 
 
     <div class="container">
-        <form>
+
             <!-- La partie Noms -->
+        <form method="post" action=<?php echo "update.php?id=".$id ?>>
             <div class="jumbotron mt-3">
                 <div class="row">
                     <div class="col-2">
@@ -30,7 +32,7 @@ $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
                     </div>
                     <div class="col-7  ml-3 mr-2">
                         
-                        <p> <?php echo($utilisateur->getNom()." "); ?> </p>
+                        <p id="nom"> <?php echo($utilisateur->getNom()." "); ?> </p>
                        
                     </div>
                     <div class="col-2"><i style="cursor:pointer;" class="fas fa-pencil-alt modifier"></i></div>
@@ -42,7 +44,7 @@ $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
                     </div>
                     <div class="col-7  ml-3 mr-2">
                         
-                      <p>  <?php echo($utilisateur->getPrenom()." "); ?> </p>
+                      <p id="prenom">  <?php echo($utilisateur->getPrenom()." "); ?> </p>
                     
                     </div>
                     <div class="col-2"><i style="cursor:pointer;" class="fas fa-pencil-alt modifier"></i></div>
@@ -54,7 +56,7 @@ $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
                     </div>
                     <div class="col-7  ml-3 mr-2">
 
-                        <p> <?php echo($utilisateur->getPseudo()." "); ?> </p>
+                        <p id="pseudo"> <?php echo($utilisateur->getPseudo()." "); ?> </p>
 
                     </div>
                     <div class="col-2"><i style="cursor:pointer;" class="fas fa-pencil-alt modifier"></i></div>
@@ -66,7 +68,7 @@ $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
                     </div>
                     <div class="col-7  ml-3 mr-2">
 
-                    <p>  <?php echo($utilisateur->getMail()." "); ?> </p>
+                    <p id="mail">  <?php echo($utilisateur->getMail()." "); ?> </p>
 
                     </div>
                     <div class="col-2"><i style="cursor:pointer;" class="fas fa-pencil-alt modifier"></i></div>
@@ -75,7 +77,10 @@ $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
                     <div class="col md-auto text-center">
                         <button  disabled id="valider" class="btn btn-success btn-md">valider</button>
                     </div>
+
                 </div>
+
+                </form>
 
             </div>
             <!-- fin de la partie Noms avec button de valider -->
@@ -127,9 +132,10 @@ $utilisateur = $appli ->getInfosUtilisateur($_GET["id"])
 
         $(".modifier").click(function () {
 
-            var h = $(this).parents(".row").children(".col-7").children(".mr-2 p").html();
+            var valeur = $(this).parents(".row").children(".col-7").children(".mr-2 p").html();
+            var id = $(this).parents(".row").children(".col-7").children(".mr-2 p").attr("id");
             $(this).parents(".row").children(".col-7").children(".mr-2 p").remove();
-            $(this).parents(".row").children(".col-7").html("<input type=text value='" + h + "'>");
+            $(this).parents(".row").children(".col-7").html("<input type=text name='" + id + "' value='" + valeur + "'>");
             $(this).remove();
             $("#valider").css('visibility','visible');
             $("#valider").removeAttr("disabled");
