@@ -1,4 +1,5 @@
 <?php
+
 class Article{
     private $id;
     private $id_chien;

@@ -8,13 +8,30 @@ $id = $_GET["id"];
 
 // Récupère les données insérées dans inscriptionArticle.php selon leurs "name".
 $contenu = $_POST["contenu"];
-$photo = $_POST["photo"];
 
+$dateParution = date("Y-m-d");
+
+
+$chemin = "/projets/Doggo-Gram/";
+
+$suffixe = date("Y-m-d-H-i-s");
+$uploadedFileName = $_FILES["photo"]["name"];
+$uploadedFile = new SplFileInfo($uploadedFileName);
+$fileExtension = $uploadedFile->getExtension();
+$destinationFolder = $_SERVER['DOCUMENT_ROOT'] . $chemin;
+$destinationName =  "Chiens/photo-article-" . $suffixe . "." . $fileExtension;
+
+if(move_uploaded_file($_FILES["photo"]["tmp_name"], $destinationFolder . $destinationName)){
+    echo "<br/> fichier enregistré avec succes";
+}
+
+
+echo '<br>';
+var_dump($_FILES);
+echo '<br>';
 var_dump($_POST);
-echo "$photo </br> $contenu";
 
-$nouvArticle = $appli->insertArticle($id, $contenu, $photo);
-var_dump($_GET);
+$nouvArticle = $appli->insertArticle($id, $contenu, $destinationName, $dateParution);
 
 header("Location: /Doggo-Gram/article.php?id=$nouvArticle", true, 303);
 exit;

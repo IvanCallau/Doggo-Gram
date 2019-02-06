@@ -1,6 +1,4 @@
-<?php
-
-echo '<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="fr">
 	<head>
@@ -33,13 +31,13 @@ echo '<!DOCTYPE html>
 
                      <li class="nav-item active ">
                         <a class="nav-link" href="inscriptionUser.php?duplicate=0">
-                            S\'inscrire
+                            S'inscrire
                         </a>
                       </li>
           
                               <li class="nav-item active">
                                   <a class="nav-link" href="identifier.php">
-                                      S\'indentifié
+                                      S'indentifié
                                   </a>
                               </li>
           
@@ -50,13 +48,13 @@ echo '<!DOCTYPE html>
                                       l</a>
           
                                       <a class="dropdown-item" href="inscriptionUser.php?duplicate=0">
-                                          S\'inscrire
+                                          S'inscrire
                                       </a>
           
                                       <div class="dropdown-divider"></div>
           
                                       <a class="dropdown-item" href="identifier.php">
-                                          S\'identifié
+                                          S'identifié
                                       </a>
                                   </div>
                               </li>
@@ -68,6 +66,4 @@ echo '<!DOCTYPE html>
                               <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit></button>
                           </form>
                       </div>
-                  </nav>';
-
-?>
+                  </nav>
