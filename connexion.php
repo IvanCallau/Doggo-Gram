@@ -176,7 +176,8 @@ class Connexion{
             FROM commentaire c
             INNER JOIN article a
             ON c.id_article = a.id
-            WHERE c.id_article = :id");
+            WHERE c.id_article = :id
+            ORDER BY c.id DESC");
             $requete->execute(array("id" => $id));
 
              $listecommentaire = $requete->fetchAll(PDO::FETCH_CLASS, "Commentaire");
@@ -331,6 +332,22 @@ class Connexion{
 
         return $id;
     }
+/* Insertion d'article  */
+    public function insertArticle($id_chien, $texte, $photo) {
+
+        $requete_prepare = $this->connexion->prepare(
+           "INSERT INTO article (id_chien, texte, photo) 
+            values (:id_chien, :texte, :photo)");
+        
+        $requete_prepare->execute(
+           array('id_chien' => $id_chien,'texte' => $texte, 'photo' => $photo));
+    
+        $id = $this->connexion->lastInsertId();
+    
+        return $id;
+    }
+
+
 
 
     // Fonction d'insertion d'un nouveau commentaire.
