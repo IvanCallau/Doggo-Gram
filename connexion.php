@@ -102,7 +102,7 @@ class Connexion{
     }
 
       //récupérer les données de l'utilisateur
-      public function getAllnfosUtilisateur($pseudo) {
+      public function getAllInfosUtilisateur($pseudo) {
         $requete_prepare = $this->connexion->prepare(
             "SELECT *
             FROM utilisateur
