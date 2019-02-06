@@ -18,14 +18,15 @@ include "Header.php";
   <link href="profilChien.css" rel="stylesheet">
 
     <div id="page" class="container">
+        <?php
 
-        <img src="paddy.jpeg" id="image" class="img-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"  alt="beagle allongé avec une peluche"><br><br>
+        echo '<img src="' . $infosChien->getPhotoChien() . '" id="image" class="img-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"  alt="beagle allongé avec une peluche"><br><br>';
         
-
+        ?>
         <div id="infoChien" class= "text-center">
             <?php
 
-            echo "<p><span><strong>Surnom:</strong>" . $infosChien->getSurnom($id) . "</span><span><strong>Né(e) le:</strong>" . $infosChien->getDateNaissance($id) . "</span><span><strong>Nom d'élevage:</strong>" . $infosChien->getNomElevage($id) . "</span><span><strong>Race:</strong>" . $infosChien->getRace($id) . "</span><span><strong>Sexe:</strong>" . $infosChien->getSexe($id) . "</span></p>";
+            echo "<p><span><strong>Surnom:</strong>" . $infosChien->getSurnom() . "</span><span><strong>Né(e) le:</strong>" . $infosChien->getDateNaissance() . "</span><span><strong>Nom d'élevage:</strong>" . $infosChien->getNomElevage() . "</span><span><strong>Race:</strong>" . $infosChien->getRace() . "</span><span><strong>Sexe:</strong>" . $infosChien->getSexe() . "</span></p>";
 
             ?>
         </div>

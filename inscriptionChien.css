@@ -74,11 +74,11 @@ a:hover {
 	.barre {
 		width:300px;
 		min-width:250px;
-		padding-left:15px;
+		padding-left:0px;
 	}
 	.gender {
-	font-size:1.75rem;
-	margin-top:30px;
+		font-size:1.75rem;
+		margin-top:30px;
 	}
 	select#race {
 		margin-left:175px;

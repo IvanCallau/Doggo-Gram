@@ -18,7 +18,19 @@ include "Header.php";
 
 		<div id="page">
 			<div id="formulaire" class="container">
-				<form method="POST" action="enregistrementChien.php?id=2">
+				<?php
+				echo '<form method="POST" action="enregistrementChien.php?id=' . $id . '" enctype="multipart/form-data">';
+				?>
+
+					<div class="champs col-12 col-sm-12">
+						<h3 class="">
+							<input type="hidden" name="MAX_FILE_SIZE" value="1048576">
+							Photo:<input id="photo" class="barre" type="file" name="photo" required>
+						</h3>
+					</div>
+
+					</br>
+					
 					<div class="champs col-12">
 						<label id="race">
 							<h3 class="">
@@ -43,14 +55,6 @@ include "Header.php";
 							
 							<option value="Bulldog">Bulldog</option>
 						</select>
-					</div>
-
-					</br>
-
-					<div class="champs col-12 col-sm-12">
-						<h3 class="">
-							Photo:<input id="photo" class="barre" type="text" name="photo" required>
-						</h3>
 					</div>
 
 					</br>
