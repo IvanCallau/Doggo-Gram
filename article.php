@@ -28,23 +28,26 @@ $commentaire = $appli ->getAllCommentaire($_GET["id"]);
 
         <div class="ecran">
            
-            <p> 
+        
+
+             
                 <?php  
           			
-                    echo '<p class="text-center">'.$article->getTexteArticle().'</p>'. "</br>"
-                        .'<p class="text-right">' .$article->getDateParutionArticle().'</p>'; 
+                    echo '<div class="row justify-content-md-center"><p class="text-center col-lg-6">'.$article->getTexteArticle().'</p>'. "</div>"
+                        .'<div class="row justify-content-md-center"><p class="col-lg-5 text-right">' .$article->getDateParutionArticle().'</p></div>'; 
                     
-                ?> 
-           </p>
+                ?>  
+                
+        
             
-           <form method="post" action=<?php echo "submitCommentaire.php?id=".$id ?>>
+           <form id="submit" method="post" action=<?php echo "submitCommentaire.php?id=".$id ?>>
             <section class="well">
                 <div class="form-group">
                     <label for="comment"  class="text-left">
                         Comment:
                     </label>
 
-                    <textarea name="texteCommentaire" class="form-control " rows="3" id="comment"></textarea>
+                    <textarea name="texteCommentaire" class="form-control" onkeypress="pressEnter(event)" rows="3" id="comment"></textarea>
 
                    
 
@@ -56,7 +59,10 @@ $commentaire = $appli ->getAllCommentaire($_GET["id"]);
                 </div>
                 </form>
 
+            <div style = "max-height:300px; overflow:scroll;">
+
                 <?php
+        
                  foreach ($commentaire as $value){
 
                 echo '<div class="input-group">';
@@ -84,6 +90,9 @@ $commentaire = $appli ->getAllCommentaire($_GET["id"]);
                 echo '</div>';
                  }
                  ?>
+
+            </div>
+
             </section>  
         </div>
 
@@ -92,3 +101,12 @@ $commentaire = $appli ->getAllCommentaire($_GET["id"]);
 include "Footer.php";
 
 ?>
+   <script>
+
+    function pressEnter(event) {
+        var code=event.which || event.keyCode; //Selon le navigateur c'est which ou keyCode
+        if (code==13) { //le code de la touche Enter
+            document.getElementById("submit").submit();
+        }
+    }
+     </script>

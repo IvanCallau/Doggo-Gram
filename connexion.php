@@ -176,7 +176,8 @@ class Connexion{
             FROM commentaire c
             INNER JOIN article a
             ON c.id_article = a.id
-            WHERE c.id_article = :id");
+            WHERE c.id_article = :id
+            ORDER BY c.id DESC");
             $requete->execute(array("id" => $id));
 
              $listecommentaire = $requete->fetchAll(PDO::FETCH_CLASS, "Commentaire");
