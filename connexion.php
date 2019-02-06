@@ -332,6 +332,22 @@ class Connexion{
 
         return $id;
     }
+/* Insertion d'article  */
+    public function insertArticle($id_chien, $texte, $photo) {
+
+        $requete_prepare = $this->connexion->prepare(
+           "INSERT INTO article (id_chien, texte, photo) 
+            values (:id_chien, :texte, :photo)");
+        
+        $requete_prepare->execute(
+           array('id_chien' => $id_chien,'texte' => $texte, 'photo' => $photo));
+    
+        $id = $this->connexion->lastInsertId();
+    
+        return $id;
+    }
+
+
 
 
     // Fonction d'insertion d'un nouveau commentaire.

@@ -12,6 +12,13 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
         <link rel="stylesheet" href="insertionArticle.css">
+   
+   <?php
+require "connexion.php";
+$appli = new Connexion();
+
+   ?>
+
     </head>
 
     <body>
@@ -69,22 +76,18 @@
         </nav>
 
     <!-- La partie principale de page -->
-
-        <div class="container text-center" id="main">
-            <div id="meme">
-                <button id="ecran">
-                    <img src="#" alt="Photo d'article">
-                </button>
-            </div>
-           
-            <form action="">
+    <form method="POST" action="enregistrementArticle.php?id=1">
+            <div class="champs col-12 col-sm-12">
+						<h3 class="">
+							Photo:<input id="photo" type="text" name="photo" required>
+						</h3>
+					</div>
                 <div class="form-group">
-                    <label for="contenu">
-                        Contenu:
-                    </label>
-                    <textarea class="form-control" rows="6" id="textarea" name="textarea"></textarea>
+                    <label for="contenu"> 
+                                <!-- id = contenu-->
+                        Contenu:<input id="contenu" type="text" name="contenu" required>
+                    </label>  
                 </div>
-
                 <button type="submit" class="btn btn-primary">
                     Valider
                 </button>
