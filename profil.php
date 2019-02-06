@@ -1,6 +1,13 @@
 <?php
 
-include "Header.php";
+session_start();
+if (!isset($_SESSION['user_id'] )){
+	//si pas loger alors redirection page identifier
+	header ("Location:http://127.0.1.17//projets/Doggo-Gram/identifier.php");
+	exit();
+}
+
+include ("Header.php");
 
 ?>
     <title>Doggo-Gram - Profil</title>
@@ -11,12 +18,12 @@ include "Header.php";
  //  inclut le contenu d'un autre fichier appelé, et provoque une erreur bloquante s'il est indisponible
 require('connexion.php');
 
-$id = $_GET["id"];
+$id = $_SESSION['user_id'];
 
 // appel de mes fonctions qui se trouvent dans mon fichier "connexion.php"
 $appli = new Connexion();
-$personne = $appli->selectPersonneById($_GET["id"]);//($_GET["id"])=récupération de l'id en BDD
-$utilisateur = $appli ->getInfosUtilisateur($_GET["id"]);
+$personne = $appli->selectPersonneById($id);//($_GET["id"])=récupération de l'id en BDD
+$utilisateur = $appli ->getInfosUtilisateur($id);
 
 ?>
 
