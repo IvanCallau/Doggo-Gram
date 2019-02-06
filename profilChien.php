@@ -49,32 +49,42 @@ include "Header.php";
                 $row += 1;
 
                 if ($row % 2 == 0) {
-                    echo '<a href="article.php">
+                    echo '
                             <div class="info row">
 
                                 <div class="image col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                                    <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
-                                </div>
+                                <a href="article.php">  
+                                  <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
+                               </a> 
+                               </div>
 
                                 <div class="nomChien col order-first order-lg-last text-center ">
+                                <div style = "max-height:155px; overflow:scroll">
                                     <p id ="résumé">' . $article->getTexteArticle() . '</p>
                                 </div>
+                                </div>
 
-                            </div>
-                        </a>';
+                            </div>'
+                        ;
                 }
                 else {
-                    echo '<a href="article.php">
-                            <div class="info row">
+                     echo 
+                            '<div class="info row">
+                           
                                 <div class="image  col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                                    <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
+                                    <a href="article.php">
+                                     <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
+                                    </a> 
                                 </div>
-                    
+                            
+
                                 <div class="nomChien col align-self-start text-center">
-                                    <p id ="résumé" >' . $article->getTexteArticle() . '</p>
+                                <div style = "max-height:155px; overflow:scroll">
+                                <p id ="résumé" >' . $article->getTexteArticle() . '</p>
                                 </div>
-                            </div>  
-                        </a>';
+                                </div>
+                            </div>'
+                      ;
                 }
             }
             ?>     
@@ -85,3 +95,18 @@ include "Header.php";
 include "Footer.php";
 
 ?>
+<script>
+var text_court
+   
+   window.onload = function(){
+       
+       text_court = document.getElementById("résumé").innerHTML;
+       document.getElementById("résumé").innerHTML = text_court.substring(0,100)+'<span style="color:blue;cursor:pointer;" onclick="rendre_court()">...suite<span>';
+   }
+
+   function rendre_court(){
+
+       document.getElementById("résumé").innerHTML = text_court;
+   }
+
+</script>

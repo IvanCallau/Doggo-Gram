@@ -58,6 +58,9 @@ body{
     #infoChien{
         font-size: 20px;
     }
+    #résumé{
+        padding-top: 10px;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up)*/
