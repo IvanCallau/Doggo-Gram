@@ -10,6 +10,7 @@ include "Header.php";
 <?php 
  //  inclut le contenu d'un autre fichier appelé, et provoque une erreur bloquante s'il est indisponible
 require('connexion.php');
+
 $id = $_GET["id"];
 
 // appel de mes fonctions qui se trouvent dans mon fichier "connexion.php"
@@ -86,9 +87,13 @@ $utilisateur = $appli ->getInfosUtilisateur($_GET["id"]);
             <!-- fin de la partie Noms avec button de valider -->
             
             <div class= "text-center">
-                <a href="inscriptionChien.php?id=$id" id="boutonRond">
+                <?php
+
+                echo '<a href="inscriptionChien.php?id=' . $id . '" id="boutonRond">
                     <span class="fas fa-plus-circle"></span>
-                </a>
+                </a>';
+
+                ?>
            </div>
 
             <div class="row">

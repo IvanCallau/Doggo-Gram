@@ -16,7 +16,7 @@ $naissance = $_POST["naissance"];
 // Variable pour ne pas avoir à écrire plusieurs fois les même choses dans le reste du code.
 $chemin = "/projets/Doggo-Gram/";
 
-$suffixe = date("YmdHis");
+$suffixe = date("Y-m-d-H-i-s");
 $uploadedFileName = $_FILES["photo"]["name"];
 $uploadedFile = new SplFileInfo($uploadedFileName);
 $fileExtension = $uploadedFile->getExtension();
