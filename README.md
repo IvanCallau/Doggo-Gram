@@ -57,8 +57,8 @@ Code PHP:
 Variables en Camelcase, sauf les "id" qui on un underscore.
 
 Créer un fichier php pour le footeur et le header
-de toutes les page (pour qu'elles soient toutes
-modifiées en même temps).
+de la majoritée des pages.
+(pour qu'elles soient toutes modifiées en même temps)
 
 ***************************************************************************
 

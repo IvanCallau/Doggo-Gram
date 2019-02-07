@@ -24,6 +24,16 @@ include "Header.php";
 
         foreach ($toutLesChiens as $unChien) {
 
+          // Stocke la date de naissance du chien.
+          $date1 = new DateTime($unChien->getDateNaissance()); 
+          // Stocke la date d'aujourd'hui.
+          $date2 = new DateTime('today');
+          // Stock la différence entre les deux dates.
+          $diff = $date1->diff($date2); 
+          // Nous donne cette différence en années.
+          $age = $diff->y;
+          $mois = $diff->m;
+
           echo '<a href="profilChien.php?id=' . $unChien->getId() . '">
                   <div class="info">
                     <div class="image">
@@ -31,13 +41,16 @@ include "Header.php";
                     </div>
 
                     <div class="nomChien">
-                      <h3>' . $unChien->getSurnom() . '</h3>
+                      <h3>' . $unChien->getSurnom() . '</h3>';
+            if ($age !== 0) {
+                      echo '<h3>' . $age . ' Ans</h3>';
+            }
+                      echo '<h3>' . $mois . ' Mois</h3>
                     </div>
                   </div>
                 </a>';
 
       }
-
       ?>
 
     </div>
