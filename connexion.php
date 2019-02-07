@@ -37,6 +37,17 @@ class Connexion{
         return $this->connexion;
     }
 
+    public function getAllChiens() {
+
+        $requete_prepare = $this->connexion->prepare(
+            "SELECT *, photo as photoChien FROM chien");
+
+        $requete_prepare->execute();
+        
+        $resultat = $requete_prepare->fetchALL(PDO::FETCH_CLASS, "Chien");  
+
+        return $resultat;
+    }
 
     public function getMesChiens($idUtilisateur) {
 
@@ -53,7 +64,6 @@ class Connexion{
             FROM utilisateur u
             INNER JOIN chien c ON c.id_utilisateur = u.id
             WHERE u.id = :id");
-
 
         $requete_prepare->execute(
             array("id" => $idUtilisateur));
@@ -333,22 +343,19 @@ class Connexion{
         return $id;
     }
 /* Insertion d'article  */
-    public function insertArticle($id_chien, $texte, $photo) {
+    public function insertArticle($id_chien, $texte, $photo, $date) {
 
         $requete_prepare = $this->connexion->prepare(
-           "INSERT INTO article (id_chien, texte, photo) 
-            values (:id_chien, :texte, :photo)");
+           "INSERT INTO article (id_chien, texte, photo, dateParution) 
+            VALUES (:id_chien, :texte, :photo, :dateParution)");
         
         $requete_prepare->execute(
-           array('id_chien' => $id_chien,'texte' => $texte, 'photo' => $photo));
+           array('id_chien' => $id_chien,'texte' => $texte, 'photo' => $photo, 'dateParution' => $date));
     
         $id = $this->connexion->lastInsertId();
     
         return $id;
     }
-
-
-
 
     // Fonction d'insertion d'un nouveau commentaire.
     public function insertCommentaire($id_article,$texteCommentaire, $dateParutionCommentaire) {
@@ -408,9 +415,7 @@ class Connexion{
     $resultat=$requete_prepare->fetch(PDO::FETCH_OBJ);
 
     return $resultat;
-}
-
-
+    }   
 
 }
 
