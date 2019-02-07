@@ -4,6 +4,8 @@ require "connexion.php";
 
 $appli = new Connexion();
 
+$toutLesChiens = $appli->getAllChiens();
+
 include "Header.php";
 
 ?>
@@ -18,103 +20,25 @@ include "Header.php";
 
     <div class="chien">
 
-    <a href="profilChien.php">
-      <div class="info">
-        <div class="image">
-          <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
-        </div>
-        <div class="nomChien">
-          <h3>Doggy</h3>
-          <p>Le petit chien cute</p>
-        </div>
-      </div>
-    </a>
+      <?php
 
-    <a href="profilChien.php">
-      <div class="info info2">
-        <div class="image">
-          <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
-        </div>
-        <div class="nomChien">
-          <h3>Paddy</h3>
-          <p>L'éveil au rendez-vous</p>
-        </div>
-      </div>
-    </a>
+        foreach ($toutLesChiens as $unChien) {
 
-    <a href="profilChien.php">
-      <div class="info">
-        <div class="image">
-          <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
-        </div>
-        <div class="nomChien">
-          <h3>Doggy</h3>
-          <p>Le petit chien cute</p>
-        </div>
-      </div>
-    </a>
+          echo '<a href="profilChien.php?id=' . $unChien->getId() . '">
+                  <div class="info">
+                    <div class="image">
+                      <img src="' . $unChien->getPhotoChien() . '" class="img-responsive" alt="petit chiot">
+                    </div>
 
-    <a href="profilChien.php">
-      <div class="info info2">
-        <div class="image">
-          <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
-        </div>
-        <div class="nomChien">
-          <h3>Doggy</h3>
-          <p>Le petit chien cute</p>
-        </div>
-      </div>
-    </a>
+                    <div class="nomChien">
+                      <h3>' . $unChien->getSurnom() . '</h3>
+                    </div>
+                  </div>
+                </a>';
 
-    <a href="profilChien.php">
-      <div class="info">
-        <div class="image">
-          <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
-        </div>
-        <div class="nomChien">
-          <h3>Doggy</h3>
-          <p>Le petit chien cute</p>
-        </div>
-      </div>
-    </a>
+      }
 
-    <a href="profilChien.php">
-      <div class="info info2 ">
-        <div class="image">
-          <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
-        </div>
-        <div class="nomChien">
-          <h3>Doggy</h3>
-          <p>Le petit chien cute</p>
-        </div>
-      </div>
-    </a>
-
-    <a href="profilChien.php">
-      <div class="info">
-        <div class="image">
-          <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
-        </div>
-        <div class="nomChien">
-          <h3>Doggy</h3>
-          <p>Le petit chien cute</p>
-        </div>
-      </div>
-    </a>
-
-    <a href="profilChien.php">
-      <div class="info info2 ">
-        <div class="image">
-          <img src="doggy.jpeg" class="img-responsive" alt="petit chiot">
-        </div>
-        <div class="nomChien">
-          <h3>Doggy</h3>
-          <p>Le petit chien cute</p>
-        </div>
-      </div>
-    </a>
-
-
+      ?>
 
     </div>
 
