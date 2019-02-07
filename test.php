@@ -4,15 +4,32 @@ require('connexion.php');
 $appli = new Connexion();
 
 
-/*
+
 if ($appli->getConnexion() !== null) {
 	echo "Connection BD réussie.</br></br>";
 }
 else {
 	echo "Connection BD échoué.</br>";
 }
-*/
 
+$toutLesChiens = $appli->getAllChiens();
+
+
+foreach ($toutLesChiens as $unChien) {
+
+	echo '<a href="profilChien.php?id=' . $unChien->getId() . '">
+            <div class="info">
+              <div class="image">
+                <img src="' . $unChien->getPhotoChien() . '" class="img-responsive" alt="petit chiot">
+              </div>
+
+              <div class="nomChien">
+                <h3>' . $unChien->getSurnom() . '</h3>
+              </div>
+            </div>
+          </a>';
+
+}
 
 // Affiche les données dans le tableau "chien" //
 
@@ -51,7 +68,7 @@ foreach ($mesChiens as $chien) {
 
 //                      Fin                     //
 
-	/*Afficher les article d'un chien*/
+	//Afficher les article d'un chien
 	$article = $appli->getAllArticle(3);
 
 	foreach ($article as $value){
@@ -65,7 +82,7 @@ foreach ($mesChiens as $chien) {
 	//                      Fin                     //
 
 
-/* 	afficher les commentaire d'un article */
+//	afficher les commentaire d'un article 
 	$commentaire = $appli->getAllCommentaire(1);
 
 	foreach($commentaire as $value){
@@ -80,7 +97,7 @@ foreach ($mesChiens as $chien) {
 		echo $value->getDateParutionCommentaire();
 		echo "</br>";
 	}
-/* 	fin */
+// 	fin */
 
 
 

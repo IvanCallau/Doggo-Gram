@@ -32,7 +32,11 @@ include "Header.php";
         </div>
 
         <div class= "text-center">
-            <a href="insertionArticle.php">
+          <?php
+
+            echo '<a href="insertionArticle.php?id=' . $id . '">';
+
+          ?>
                 <button id="plus" class="btn btn-dark btn-circle btn-lg text-center"><span class="fas fa-plus-circle"></span>
                 </button>
             </a>
