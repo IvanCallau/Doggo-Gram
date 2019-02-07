@@ -47,7 +47,7 @@ $appli = new Connexion();
 			</nav>
 		</div>
 
-		</br>
+		<br/>
 
 		<div id="page">
 			<div id="formulaire" class="container">
