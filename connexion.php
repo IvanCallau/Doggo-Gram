@@ -100,13 +100,27 @@ class Connexion{
     //récupérer les données de l'utilisateur
     public function getInfosUtilisateur($id_utilisateur) {
         $requete_prepare = $this->connexion->prepare(
-            "SELECT u.nom, u.prenom, u.pseudo, u.mail
-            FROM utilisateur u
-            WHERE u.id = :id");
+            "SELECT nom,prenom,pseudo,mail
+            FROM utilisateur 
+            WHERE id = :id");
 
         $requete_prepare->execute(array("id"=> $id_utilisateur));
 
         $resultat=$requete_prepare->fetchObject("Utilisateur");  
+
+        return $resultat;
+    }
+
+      //récupérer les données de l'utilisateur
+      public function getAllInfosUtilisateur($pseudo) {
+        $requete_prepare = $this->connexion->prepare(
+            "SELECT *
+            FROM utilisateur
+            WHERE pseudo = :pseudo" );
+
+        $requete_prepare->execute(array("pseudo"=> $pseudo));
+
+        $resultat=$requete_prepare->fetch(PDO::FETCH_OBJ);  
 
         return $resultat;
     }
@@ -278,47 +292,47 @@ class Connexion{
            return $succes;
         }
 
-        // modifier le pseudo de la personne dans BDD
-        public function modifierPseudoPersonne($id,$pseudo){
-            $succes = true;
-            try{
-                $requete_prepare = $this->connexion -> prepare(
-                    "UPDATE  utilisateur 
-                     SET pseudo=:pseudo
-                     WHERE id=:id");
-    
-                $requete_prepare->execute(
-                    array(  "id"=>$id,
-                            "pseudo" =>$pseudo)
-                );
-    
-                }catch(Exception $e){
-                    echo "Erreur:".$e -> getMessage()."<br>";
-                    $succes = false;
-                }
-               return $succes;
-            }
+    // modifier le pseudo de la personne dans BDD
+    public function modifierPseudoPersonne($id,$pseudo){
+        $succes = true;
+        try{
+            $requete_prepare = $this->connexion -> prepare(
+                "UPDATE  utilisateur 
+                    SET pseudo=:pseudo
+                    WHERE id=:id");
 
-            //modifier le mail de la personne dans BDD
-            public function modifierMailPersonne($id,$mail){
-                $succes = true;
-                try{
-                    $requete_prepare = $this->connexion -> prepare(
-                        "UPDATE  utilisateur 
-                         SET mail=:mail
-                         WHERE id=:id");
-        
-                    $requete_prepare->execute(
-                        array(  "id"=>$id, 
-                                "mail" =>$mail)
-                    );
-        
-                    }catch(Exception $e){
-                        echo "Erreur:".$e -> getMessage()."<br>";
-                        $succes = false;
-                    }
-                   return $succes;
-                }
+            $requete_prepare->execute(
+                array(  "id"=>$id,
+                        "pseudo" =>$pseudo)
+            );
+
+            }catch(Exception $e){
+                echo "Erreur:".$e -> getMessage()."<br>";
+                $succes = false;
+            }
+            return $succes;
+        }
+
+    //modifier le mail de la personne dans BDD
+    public function modifierMailPersonne($id,$mail){
+        $succes = true;
+        try{
+            $requete_prepare = $this->connexion -> prepare(
+                "UPDATE  utilisateur 
+                    SET mail=:mail
+                    WHERE id=:id");
+
+            $requete_prepare->execute(
+                array(  "id"=>$id, 
+                        "mail" =>$mail)
+            );
+
+            }catch(Exception $e){
+                echo "Erreur:".$e -> getMessage()."<br>";
+                $succes = false;
+            }
+            return $succes;
+        }
 
     // Fonction d'insertion de nouveau Chien.
     public function insertChien($id_utilisateur, $surnom, $nomElevage, $dateNaissance, $sexe, $race, $photo) {
@@ -356,6 +370,7 @@ class Connexion{
     
         return $id;
     }
+
 
     // Fonction d'insertion d'un nouveau commentaire.
     public function insertCommentaire($id_article,$texteCommentaire, $dateParutionCommentaire) {
@@ -402,6 +417,20 @@ class Connexion{
             return true;
         }
         return false;
+    }
+
+
+    public function getPasswordHash($mdp_hash){
+        $requete = $this->connexion->prepare(
+           "SELECT *
+            FROM utilisateur 
+            WHERE motDePasse = :motDePasse"
+            );
+            $requete->execute(array("motDePasse" => $mdp_hash));
+
+             $hacheMpd = $requete->fetchAll(PDO::FETCH_CLASS, "Utilisateur");
+ 
+            return $hacheMpd;
     }
 
     //selectionner les personne par leur ID

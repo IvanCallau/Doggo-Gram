@@ -1,6 +1,13 @@
 <?php
+session_start();
+if (isset($_SESSION['user_id'] )){
+	//déjà loger alors redirection page profil
+	header ("Location:http://127.0.1.17//projets/Doggo-Gram/profil.php");
+	exit();
+}
 
-require "connexion.php";
+require ("connexion.php");
+
 
 $appli = new Connexion();
 
@@ -12,11 +19,11 @@ include "Header.php";
 
 		<link rel="stylesheet" type="text/css" href="identifier.css" />
 
-		</br>
+		<br/>
 
 		<div id="page">
 			<div id="formulaire" class="container">
-				<form method="POST" action="pagePersoArticle.php">
+				<form method="POST" name="login" action="login.php">
 					<div class="champs col-12">
 						<label id="pseudo">
 							<h3 class="">
@@ -29,7 +36,7 @@ include "Header.php";
 
 					<div class="champs col-12 col-sm-12">
 						<h3 class="">
-							Mot de passe:<input id="mdp" class="barre" type="text" name="mdp" placeholder="Password" required>
+							Mot de passe:<input id="mdp" class="barre" type="text" name="motDePasse" placeholder="Password" required>
 						</h3>
 					</div>
 
