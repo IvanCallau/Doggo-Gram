@@ -12,8 +12,16 @@ else {
 	echo "Connection BD échoué.</br>";
 }
 
-$toutLesChiens = $appli->getAllChiens();
 
+include "loggedHeader.php";
+
+include "Header.php";
+
+
+include "Footer.php";
+
+
+$toutLesChiens = $appli->getAllChiens();
 
 foreach ($toutLesChiens as $unChien) {
 

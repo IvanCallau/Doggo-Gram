@@ -3,11 +3,13 @@
 session_start();
 if (!isset($_SESSION['user_id'] )){
 	//si pas loger alors redirection page identifier
-	header ("Location:http://127.0.1.17//projets/Doggo-Gram/identifier.php");
+	header ("Location:identifier.php");
 	exit();
 }
+else {
+    include ("LoggedHeader.php");
+}
 
-include ("Header.php");
 
 ?>
     <title>Doggo-Gram - Profil</title>
