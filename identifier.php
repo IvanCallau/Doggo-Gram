@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION['user_id'] )){
 	//déjà loger alors redirection page profil
-	header ("Location:http://127.0.1.17//projets/Doggo-Gram/profil.php");
+	header ("Location:profil.php");
 	exit();
 }
 
@@ -36,7 +36,7 @@ include "Header.php";
 
 					<div class="champs col-12 col-sm-12">
 						<h3 class="">
-							Mot de passe:<input id="mdp" class="barre" type="text" name="motDePasse" placeholder="Password" required>
+							Mot de passe:<input id="mdp" class="barre" type="password" name="motDePasse" placeholder="Password" required>
 						</h3>
 					</div>
 
