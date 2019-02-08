@@ -16,14 +16,14 @@ $pseudo = $_POST["pseudo"];
 $motDePasse = $_POST["motDePasse"];
 
 
-$utilisateur = $appli->getAllnfosUtilisateur($pseudo);
+$utilisateur = $appli->getAllInfosUtilisateur($pseudo);
 
 $utilisateurMdpBDD = $utilisateur->motDePasse;
 
 if(password_verify($motDePasse, $utilisateurMdpBDD)) {
     echo 'OK';
     $_SESSION['user_id'] = $utilisateur->id;
-    header ("Location:http://127.0.1.17//projets/Doggo-Gram/profil.php");
+    header ("Location: profil.php");
  } else {
      echo 'ERREUR';
  }
