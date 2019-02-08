@@ -446,6 +446,18 @@ class Connexion{
     return $resultat;
     }   
 
-}
 
+
+ //Rechercher un chien par son nom,prénom,ou en donnant quelques lettre( pour barre de recherche) 
+ public function SelectPersonneByRaceLike($pattern){
+   
+    $requete_prepare = $this->connexion -> prepare (
+        "SELECT * FROM chien WHERE LOWER(race) LIKE LOWER(race)"
+        );
+    $requete_prepare ->execute (array("race"=>"%$pattern%"));
+    $resultat=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+    
+    return $resultat;
+}
+}
 ?>
