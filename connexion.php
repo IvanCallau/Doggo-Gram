@@ -448,17 +448,17 @@ class Connexion{
 
 
 
- //Rechercher un chien par son nom,prénom,ou en donnant quelques lettre( pour barre de recherche) 
- public function SelectChienByPattern($pattern){
-   
-    $requete_prepare = $this->connexion -> prepare (
-        "SELECT * FROM chien WHERE LOWER(race) LIKE LOWER(:race)
-       OR LOWER(surnom) LIKE LOWER(:surnom)"
-        );
-    $requete_prepare ->execute (array("race"=>"%$pattern%","surnom"=>"%$pattern%"));
-    $resultat=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+    //Rechercher un chien par sa race et son surnom en donnant quelques lettres( pour barre de recherche) 
+    public function SelectChienByPattern($pattern){
     
-    return $resultat;
-}
+        $requete_prepare = $this->connexion -> prepare (
+            "SELECT * FROM chien WHERE LOWER(race) LIKE LOWER(:race)
+        OR LOWER(surnom) LIKE LOWER(:surnom)"
+            );
+        $requete_prepare ->execute (array("race"=>"%$pattern%","surnom"=>"%$pattern%"));
+        $resultat=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
+        
+        return $resultat;
+    }
 }
 ?>
