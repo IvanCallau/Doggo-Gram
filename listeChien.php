@@ -4,11 +4,26 @@ require "connexion.php";
 
 $appli = new Connexion();
 
-$toutLesChiens = $appli->getAllChiens();
+//$toutLesChiens = $appli->getAllChiens();
 
-include "Header.php";
 
-?>
+//session_start();
+//if (isset($_SESSION['user_id'] )) {
+ // include "HeaderLogued.php";
+//} else {
+//  include "HeaderAnonyme.php";
+//}
+ include 'Header.php';
+
+ $pattern = "";
+ // Si mon pattern existe et est rempli
+ if(isset($_GET["recherche"])){
+     // Alors je set mon pattern
+   $pattern = $_GET["recherche"];
+ }
+ $recherche = $appli->SelectChienByPattern($pattern);
+
+ ?>
 
   <title>Doggo-Gram - Liste des Chiens</title>
 
@@ -22,33 +37,21 @@ include "Header.php";
 
       <?php
 
-        foreach ($toutLesChiens as $unChien) {
+        foreach ($recherche as $unChien) {
 
-          // Stocke la date de naissance du chien.
-          $date1 = new DateTime($unChien->getDateNaissance()); 
-          // Stocke la date d'aujourd'hui.
-          $date2 = new DateTime('today');
-          // Stock la différence entre les deux dates.
-          $diff = $date1->diff($date2); 
-          // Nous donne cette différence en années.
-          $age = $diff->y;
-          $mois = $diff->m;
-
-          echo '<a href="profilChien.php?id=' . $unChien->getId() . '">
+         echo ' <a href="profilChien.php?id=' . $unChien->id . '">
                   <div class="info">
                     <div class="image">
-                      <img src="' . $unChien->getPhotoChien() . '" class="img-responsive" alt="petit chiot">
+                      <img src="' . $unChien->photo . '" class="img-responsive" alt="petit chiot">
                     </div>
 
                     <div class="nomChien">
-                      <h3>' . $unChien->getSurnom() . '</h3>';
-            if ($age !== 0) {
-                      echo '<h3>' . $age . ' Ans</h3>';
-            }
-                      echo '<h3>' . $mois . ' Mois</h3>
-                    </div>
-                  </div>
-                </a>';
+                      <h3>' . $unChien->surnom . '</h3>
+                      </div>
+
+                      </div>
+                      </a>';
+        
 
       }
       ?>
