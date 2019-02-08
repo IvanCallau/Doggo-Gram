@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous" />
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"crossorigin="anonymous">
 
+
 	</head>
 
 	<body>	
@@ -35,35 +36,40 @@
                         </a>
                       </li>
           
-                              <li class="nav-item active">
-                                  <a class="nav-link" href="identifier.php">
-                                      S'indentifié
-                                  </a>
-                              </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="identifier.php">
+                            S'indentifié
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="profil.php">
+                                Profil
+                            </a>
+
+                            <a class="dropdown-item" href="inscriptionUser.php?duplicate=0">
+                                S'inscrire
+                            </a>
+
+                            <div class="dropdown-divider"></div>
+
+                            <a class="dropdown-item" href="identifier.php">
+                                S'identifié
+                            </a>
+                        </div>
+                    </li>
+                </ul>
           
-                              <li class="nav-item dropdown">
-                                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                      <a class="dropdown-item" href="profil.php">
-                                          Profi
-                                      l</a>
-          
-                                      <a class="dropdown-item" href="inscriptionUser.php?duplicate=0">
-                                          S'inscrire
-                                      </a>
-          
-                                      <div class="dropdown-divider"></div>
-          
-                                      <a class="dropdown-item" href="identifier.php">
-                                          S'identifié
-                                      </a>
-                                  </div>
-                              </li>
-                          </ul>
-          
-                          <form class="form-inline my-2 my-lg-0">
-                              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          
-                              <button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit></button>
-                          </form>
+                    <form action="listeChien.php" class="form-inline my-2 my-lg-0">
+                    <?php
+                   
+                    echo '<input class="form-control mr-sm-2" type="search" name="recherche" placeholder="Rechercher" aria-label="Search">';
+
+                    echo '<button class="btn btn-outline-success my-2 my-sm-0 fas fa-search type=" submit></button>';
+                 
+                    ?>
+                    </form>
+
                       </div>
-                  </nav>
+        </nav>
