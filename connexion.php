@@ -138,14 +138,11 @@ class Connexion{
     //récupération l'article par son id
     public function getArticle($id){
         $requete_prepare = $this->connexion->prepare(
-            "SELECT a.id,a.id_chien,a.texte as texteArticle,a.photo as photoArticle,a.dateParution as dateParutionArticle,
-            ch.id,ch.id_utilisateur,ch.surnom,ch.nomElevage,ch.dateNaissance,ch.sexe,ch.race,ch.photo as photoChien
+            "SELECT a.id,a.id_chien,a.texte as texteArticle,a.photo as photoArticle,a.dateParution as dateParutionArticle
             FROM article a
-            INNER Join chien ch
-            ON a.id_chien = ch.id
             WHERE a.id = :idArticle");
 
-        $requete_prepare ->execute(array("idArticle" => $id));
+        $requete_prepare->execute(array("idArticle" => $id));
         $article = $requete_prepare->fetchObject('Article');
             
         return $article;
@@ -154,11 +151,8 @@ class Connexion{
     //récupération tous les articles
     public function getAllArticle($id){
         $requete_prepare = $this->connexion->prepare(
-            "SELECT a.id,a.id_chien,a.texte as texteArticle,a.photo as photoArticle,a.dateParution as dateParutionArticle,
-            ch.id,ch.id_utilisateur,ch.surnom,ch.nomElevage,ch.dateNaissance,ch.sexe,ch.race,ch.photo as photoChien
+            "SELECT a.id as id,a.id_chien,a.texte as texteArticle,a.photo as photoArticle,a.dateParution as dateParutionArticle
             FROM article a
-            INNER Join chien ch
-            ON a.id_chien = ch.id
             WHERE a.id_chien = :id");
             
         $requete_prepare ->execute(array("id" => $id));
