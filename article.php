@@ -10,9 +10,9 @@ include "Header.php";
 
 $appli = new Connexion();
 //récupération de l'article dans BDD
-$article = $appli ->getArticle($_GET["id"]);
+$article = $appli->getArticle($_GET["id"]);
 //récupération des commentaires dans BDD
-$commentaire = $appli ->getAllCommentaire($_GET["id"]);
+$commentaire = $appli->getAllCommentaire($_GET["id"]);
 
 ?>
 
