@@ -58,9 +58,10 @@ include "Header.php";
                             <div class="info row">
 
                                 <div class="image col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                                <a href="article.php">  
+                                
+                                  <a href="article.php?id='.$article->getId().'">
                                   <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
-                               </a> 
+                               </a>
                                </div>
 
                                 <div class="nomChien col order-first order-lg-last text-center ">
@@ -77,7 +78,7 @@ include "Header.php";
                             '<div class="info row">
                            
                                 <div class="image  col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                                    <a href="article.php">
+                                    <a href="article.php?id='.$article->getId().'">
                                      <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
                                     </a> 
                                 </div>
