@@ -17,7 +17,8 @@ $id = $_SESSION['user_id'];
 // appel de mes fonctions qui se trouvent dans mon fichier "connexion.php"
 $appli = new Connexion();
 $personne = $appli->selectPersonneById($id);//($_GET["id"])=récupération de l'id en BDD
-$utilisateur = $appli ->getInfosUtilisateur($id);
+$utilisateur = $appli->getInfosUtilisateur($id);
+$photos = $appli->getMesChiens($id);
 
 ?>
 
@@ -91,27 +92,31 @@ $utilisateur = $appli ->getInfosUtilisateur($id);
             <!-- fin de la partie Noms avec button de valider -->
             
             <div class= "text-center">
+
                 <?php
 
                 echo '<a href="inscriptionChien.php?id=' . $id . '" id="boutonRond">
                     <span class="fas fa-plus-circle"></span>
                 </a>';
-
+                
                 ?>
            </div>
 
-            <div class="row">
+        <?php
+        foreach ($photos as $value) {
+          echo' <div class="row">
                 <div class="col md-auto text-center grandir mt-4">
-                    <a href="profilChien.php">
-                        <img src="imageDePageProfil.jpg" alt="image" width="130x" class="m-1">
+                    <a href="profilChien.php?id=' .$value->id. '">
+                        <img src="'.$value->photo.'" alt="image" width="130x" class="m-1">
                     </a>
 
                     <a href="profilChien.php">
-                        <img src="imageDePageProfil.jpg" alt="image" width="130x" class="m-1">
+                        <img src="'.$value->photo.'" alt="image" width="130x" class="m-1">
                     </a>
                 </div>
-            </div>
-
+            </div>';
+        }
+            ?>
 
 
             <!-- la partie de ajouter les images et affichage d'images -->
