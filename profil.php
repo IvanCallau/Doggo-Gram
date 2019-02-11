@@ -1,24 +1,15 @@
 <?php
 
+require'connexion.php';
+
 session_start();
 if (!isset($_SESSION['user_id'] )){
 	//si pas loger alors redirection page identifier
 	header ("Location:identifier.php");
 	exit();
 }
-else {
-    include ("LoggedHeader.php");
-}
 
-
-?>
-    <title>Doggo-Gram - Profil</title>
-
-    <link rel="stylesheet" href="profil.css">
-
-<?php 
- //  inclut le contenu d'un autre fichier appelé, et provoque une erreur bloquante s'il est indisponible
-require('connexion.php');
+include "loggedHeader.php";
 
 $id = $_SESSION['user_id'];
 
@@ -29,6 +20,9 @@ $utilisateur = $appli ->getInfosUtilisateur($id);
 
 ?>
 
+    <title>Doggo-Gram - Profil</title>
+
+    <link rel="stylesheet" href="profil.css">
 
     <div class="container">
 
