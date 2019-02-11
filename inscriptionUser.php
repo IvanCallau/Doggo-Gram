@@ -1,7 +1,6 @@
 <?php
 // Initialisation de la session.
 session_start();
-
 require "connexion.php";
 
 $appli = new Connexion();
@@ -85,7 +84,7 @@ $appli = new Connexion();
 						</div>
 					</div>
 
-					</br>
+					<br>
 
 					<div class="champs col-12">
 						<h3 class="">
@@ -93,7 +92,7 @@ $appli = new Connexion();
 						</h3>
 					</div>
 
-					</br>
+					<br>
 					
 					<div class="champs col-12">
 						<h3 class="">
@@ -101,7 +100,7 @@ $appli = new Connexion();
 						</h3>
 					</div>
 
-					</br>
+					<br>
 					
 					<div class="champs col-12">
 						<h3 class="">
@@ -109,11 +108,11 @@ $appli = new Connexion();
 						</h3>
 					</div>
 
-					</br>
+					<br>
 
-					</br>
+					<br>
 					
-					</br>
+					<br>
 					
 					<div class="row">
 						<div class="col-4"></div>
