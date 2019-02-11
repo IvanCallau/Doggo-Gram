@@ -5,7 +5,8 @@ require'connexion.php';
 session_start();
 if (!isset($_SESSION['user_id'] )){
 	//si pas loger alors redirection page identifier
-	header ("Location:identifier.php");
+    header ("Location:identifier.php");
+    
 	exit();
 }
 

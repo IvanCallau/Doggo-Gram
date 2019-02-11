@@ -2,6 +2,12 @@
 // Initialisation de la session.
 session_start();
 
+if (isset($_SESSION['user_id'] )){
+	//barre de navigation pour utilisateur logged
+	include ("loggedHeader.php");
+    exit();
+}
+
 require "connexion.php";
 
 $id = $_GET["id"];
@@ -16,7 +22,7 @@ include "header.php";
 
 	<link rel="stylesheet" type="text/css" href="inscriptionChien.css" />
 		
-		</br>
+		<br>
 
 		<div id="page">
 			<div id="formulaire" class="container">
@@ -31,7 +37,7 @@ include "header.php";
 						</h3>
 					</div>
 
-					</br>
+					<br>
 					
 					<div class="champs col-12">
 						<label id="race">
@@ -123,7 +129,7 @@ include "header.php";
 						</select>
 					</div>
 
-					</br>
+					<br>
 					
 					<div class="champs col-12 col-sm-12">
 						<h3 class="">
@@ -131,7 +137,7 @@ include "header.php";
 						</h3>
 					</div>
 
-					</br>
+					<br>
 					
 					<div class="champs col-12 col-sm-12">
 						<h3 class="">
@@ -163,7 +169,7 @@ include "header.php";
 						</h3>
 				    </div>
 
-					</br>
+					<br>
 					
 					<div class="row">
 						<div class="col-4 col-sm-5"></div>
