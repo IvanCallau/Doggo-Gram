@@ -1,4 +1,6 @@
 <?php
+// Inisialisation de la session.
+session_start();
 
 require('connexion.php');
 
@@ -26,7 +28,26 @@ include "header.php";
         <div id="infoChien" class= "text-center">
             <?php
 
-            echo "<p><span><strong>Surnom:</strong>" . $infosChien->getSurnom() . "</span><span><strong>Né(e) le:</strong>" . $infosChien->getDateNaissance() . "</span><span><strong>Nom d'élevage:</strong>" . $infosChien->getNomElevage() . "</span><span><strong>Race:</strong>" . $infosChien->getRace() . "</span><span><strong>Sexe:</strong>" . $infosChien->getSexe() . "</span></p>";
+            $d1 = new DateTime($infosChien->getDateNaissance());
+            $d2 = new DateTime('today');
+            $diff = $d1->diff($d2);
+
+            $age_annees = $diff->y;
+            $age_mois = $diff->m;
+
+            if ($age_annees < 1) {
+              $age = $age_mois;
+            }
+            else {
+              $age = $age_annees;
+            }
+
+            if ($age_mois < 1) {
+              $age = "Nouveau née";
+            }
+
+
+            echo "<p><span><strong>Surnom:</strong>" . $infosChien->getSurnom() . "</span><span><strong>Age:</strong>" . $age . "</span><span><strong>Nom d'élevage:</strong>" . $infosChien->getNomElevage() . "</span><span><strong>Race:</strong>" . $infosChien->getRace() . "</span><span><strong>Sexe:</strong>" . $infosChien->getSexe() . "</span></p>";
 
             ?>
         </div>
