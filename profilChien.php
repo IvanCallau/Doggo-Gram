@@ -9,7 +9,7 @@ $id = $_GET["id"];
 $infosChien = $appli->getInfosChien($id);
 $articles = $appli->getAllArticle($id);
 
-include "Header.php";
+include "header.php";
 
 ?>
 
@@ -98,7 +98,7 @@ include "Header.php";
 
 <?php
 
-include "Footer.php";
+include "footer.php";
 
 ?>
 <script>

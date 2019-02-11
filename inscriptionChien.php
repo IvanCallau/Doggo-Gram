@@ -6,7 +6,7 @@ $id = $_GET["id"];
 
 $appli = new Connexion();
 
-include "Header.php";
+include "header.php";
 
 ?>
 
@@ -175,6 +175,6 @@ include "Header.php";
 		</div>
 <?php
 
-include "Footer.php";
+include "footer.php";
 
 ?>

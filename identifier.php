@@ -11,7 +11,7 @@ require ("connexion.php");
 
 $appli = new Connexion();
 
-include "Header.php";
+include "header.php";
 
 ?>
 
@@ -57,6 +57,6 @@ include "Header.php";
 
 <?php
 
-include "Footer.php";
+include "footer.php";
 
 ?>

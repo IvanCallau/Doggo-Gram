@@ -6,7 +6,7 @@ $id = $_GET["id"];
 
 $appli = new Connexion();
 
-include "Header.php";
+include "header.php";
 
 $appli = new Connexion();
 //récupération de l'article dans BDD
@@ -98,7 +98,7 @@ $commentaire = $appli->getAllCommentaire($_GET["id"]);
 
 <?php
 
-include "Footer.php";
+include "footer.php";
 
 ?>
    <script>

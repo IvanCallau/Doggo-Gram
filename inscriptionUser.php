@@ -126,6 +126,6 @@ $appli = new Connexion();
 
 <?php
 
-include "Footer.php";
+include "footer.php";
 
 ?>

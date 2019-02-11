@@ -13,7 +13,7 @@ $appli = new Connexion();
 //} else {
 //  include "HeaderAnonyme.php";
 //}
- include 'Header.php';
+ include 'header.php';
 
  $pattern = "";
  // Si mon pattern existe et est rempli
@@ -62,6 +62,6 @@ $appli = new Connexion();
 
 <?php
 
-include "Footer.php";
+include "footer.php";
 
 ?>
