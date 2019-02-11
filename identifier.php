@@ -5,7 +5,7 @@ if (isset($_SESSION['user_id'] )){
 	header ("Location:profil.php");
 	exit();
 }
-
+ 
 require ("connexion.php");
 
 
