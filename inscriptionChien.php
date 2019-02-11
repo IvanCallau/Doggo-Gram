@@ -5,7 +5,8 @@ session_start();
 if (isset($_SESSION['user_id'] )){
 	//barre de navigation pour utilisateur logged
 	include ("loggedHeader.php");
-    exit();
+}else{
+	include "header.php";
 }
 
 require "connexion.php";
@@ -14,7 +15,7 @@ $id = $_GET["id"];
 
 $appli = new Connexion();
 
-include "header.php";
+
 
 ?>
 
