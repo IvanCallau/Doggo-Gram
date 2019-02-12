@@ -12,13 +12,22 @@ else {
 	echo "Connection BD échoué.</br>";
 }
 
+$pseudo = $appli->getAllCommentaire(3);
 
+
+foreach ($pseudo as $key) {
+	echo $key->getAuteur();
+}
+
+
+
+
+/*
 include "loggedHeader.php";
 
-include "Header.php";
+include "header.php";
 
-
-include "Footer.php";
+include "footer.php";
 
 
 $toutLesChiens = $appli->getAllChiens();

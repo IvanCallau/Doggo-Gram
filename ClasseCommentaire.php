@@ -2,7 +2,7 @@
 
 class Commentaire{
     private $id;
-    private $id_utilisateur;
+    private $auteur;
     private $id_article;
     private $texteCommentaire;
     private $dateParutionCommentaire;
@@ -13,8 +13,8 @@ class Commentaire{
     public function getId(){
         return $this->id;
     }
-    public function getId_utilisateur(){
-        return $this->id_utilisateur;
+    public function getAuteur(){
+        return $this->auteur;
     }
     public function getIdArticle(){
         return $this->id_article;
