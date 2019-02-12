@@ -6,7 +6,8 @@
     display:flex;
     margin-top:20px;
      border: solid 3px;
-     max-width: 300px;
+     width: 300px;
+     min-height: 130px;
 }
 .chien{
     display:flex;
@@ -21,8 +22,8 @@
 }
 img.img-responsive{
    max-width: 191px;
-   max-height: 134px;
-   
+   height: 130px;
+   object-fit: cover;
 }
 
 /*pour small screen*/
@@ -36,10 +37,9 @@ img.img-responsive{
     }
 
     img.img-responsive{
-        max-height: 107px;
-        max-width: 153;
-        width:100%;
-        height:100%;
+        max-width: 191px;
+   height: 130px;
+   object-fit: cover;
     }
     .chien{
         margin: 10%;
