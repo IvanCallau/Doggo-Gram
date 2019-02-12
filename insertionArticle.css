@@ -1,60 +1,46 @@
 @media (min-width: 320px) and (max-width: 576px) {
-    #main{
-        width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 55px;
-    } 
-    #ecran{
-        width: 190px;
-        height: 170px;
-        border-radius: 8px;
-        margin: 25px;
+    .h3, h3 {
+        font-size: 9px;
+        margin-top: 38px;
+        margin-bottom: 30px;
+    }    
+    #contenu{
+        height: 100px;
+        margin-top: 13px;
     }
-  }
-@media (min-width: 768px) {
-    body {
-        background-color:#E6E4E4;
+    #button{
+        text-align: center;
     }
-
-    #main{
-        margin-right: 14%;
-        margin-left:12%;
-        margin-top:55px;
-        border:solid 3px;
-        padding-bottom:20px;
-        background-color:#FFF;
-    }
-
-    #ecran{
-        width: 190px;
-        height: 170px;
-        border-radius: 8px;
-        margin: 25px;
+    .center{
+        font-size: 12px;
+        border-radius: 12px;
     }
    
-    #photo{
-        width: 520px;
-        margin-left: auto;
-        margin-right: auto; 
+  }
+@media (min-width: 768px) {
+    #grandir{
+        font-size: 48px;
+        margin-top: 7px;
+        margin-top: 80px;
+        text-align: center;
     }
-    #titre{
-        width: 420px;
-        margin-left: auto;
-        margin-right: auto;
+    .input-group{
+        margin-left: 140px;
 
     }
-    #textarea{
-        width: 520px;
-        margin-right: auto;
-        margin-left: auto;
+    #contenu{
+        height: 190px;
+        font-size: 53px;
     }
-    .label{
-        display: inline-block;
-        font-size: 30px;
-        color: black;
-
+    #button{
+        text-align: center;
     }
+    #button button{
+        font-size: 23px;
+        border-radius: 40px;
+        padding: 21px;
+    }
+    
    
 }
 
