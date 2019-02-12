@@ -15,9 +15,9 @@ $id = $_SESSION['user_id'];
 
 // appel de mes fonctions qui se trouvent dans mon fichier "connexion.php"
 $appli = new Connexion();
-$personne = $appli->selectPersonneById($id);//($_GET["id"])=récupération de l'id en BDD
+
 $utilisateur = $appli->getInfosUtilisateur($id);
-$photos = $appli->getMesChiens($id);
+$infos = $appli->getMesChiens($id);
 
 ?>
 
@@ -102,20 +102,20 @@ $photos = $appli->getMesChiens($id);
            </div>
 
         <?php
-        foreach ($photos as $value) {
-          echo' <div class="row">
-                <div class="col md-auto text-center grandir mt-4">
-                    <a href="profilChien.php?id=' .$value->id. '">
-                        <img src="'.$value->photo.'" alt="image" width="130x" class="m-1">
-                    </a>
 
-                    <a href="profilChien.php">
-                        <img src="'.$value->photo.'" alt="image" width="130x" class="m-1">
-                    </a>
-                </div>
-            </div>';
+        foreach ($infos as $info) {
+
+            echo '<div class="row">
+                    <div class="col md-auto text-center grandir mt-4">
+                        <a href="profilChien.php?id=' . $info->getId() . '">
+                            <img src="' . $info->getPhotoChien() . '" alt="image" width="130x" class="m-1">
+                        </a>
+                    </div>
+                </div>';
+                
         }
-            ?>
+
+        ?>
 
 
             <!-- la partie de ajouter les images et affichage d'images -->
