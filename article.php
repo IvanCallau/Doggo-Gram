@@ -40,15 +40,15 @@ $commentaire = $appli->getAllCommentaire($_GET["id"]);
 
         <div class="ecran">
            
-                <?php  
-          			
-                    echo '<div class="row justify-content-md-center">
-                            <p class="text-center col-lg-6">
-                                '.$article->getTexteArticle().'
-                            </p>'. "</div>"
-                        .'<div class="row justify-content-md-center"><p class="col-lg-5 text-right">' .$article->getDateParutionArticle().'</p></div>'; 
-                    
-                ?>  
+            <?php
+      			
+                echo '<div class="row justify-content-md-center">
+                        <p class="text-center col-lg-6">
+                            '.$article->getTexteArticle().'
+                        </p>'. "</div>"
+                    .'<div class="row justify-content-md-center"><p class="col-lg-5 text-right">' .$article->getDateParutionArticle().'</p></div>'; 
+                
+            ?>  
 
            <form id="submit" method="post" action=<?php echo "submitCommentaire.php?id=".$id ?>>
             <section class="well">
@@ -73,21 +73,20 @@ $commentaire = $appli->getAllCommentaire($_GET["id"]);
 
                 <?php
         
-                 foreach ($commentaire as $value){
+                foreach ($commentaire as $value){
 
-                echo '<p class="text-center col-lg-6">' . $value->getId_utilisateur() . '</p>';
-                echo '<div class="input-group">';
-                echo '<p>';
-                echo $value->getTexteCommentaire().'</br>';
-                echo '</p>';
-                echo '</div>';
-                echo '<div class="text-right">';
-                echo '<p>'; 
-                echo $value->getDateParutionCommentaire().'</br>';
-                echo '</p>';
-                echo '</div>';
-                 }
-                 ?>
+                    echo '<div class="input-group">
+                            <p>' . $value->getAuteur() . ':&nbsp&nbsp&nbsp' . $value->getTexteCommentaire() . '</br>
+                            </p>
+                          </div>
+
+                          <div class="text-right">
+                            <p>' . $value->getDateParutionCommentaire() . '</br>
+                            </p>
+                          </div>';
+                }
+
+                ?>
 
             </div>
 

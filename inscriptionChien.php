@@ -92,11 +92,10 @@ $appli = new Connexion();
 					<div class="champs col-12 col-sm-12">
 						<?php
 
-						$date = new DateTime('today');
-
 						echo '<h3>
-								Date de naissance:<input id="naissance" type="date" class="barre" name="naissance" min="1994-12-31" max="$date" required>
-							  </h3>';
+								Date de naissance:<input id="naissance" type="date" class="barre" name="naissance" min="1994-12-31" required>
+							</h3>';
+
 						?>
 				    </div>
 
