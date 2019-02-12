@@ -5,7 +5,8 @@ session_start();
 if (isset($_SESSION['user_id'] )){
 	//barre de navigation pour utilisateur logged
 	include ("loggedHeader.php");
-    exit();
+}else{
+    require"header.php";
 }
 
 require "connexion.php";
@@ -14,7 +15,7 @@ $appli = new Connexion();
 
 $id = $_GET["id"];
 
-require"Header.php";
+
 
 ?>
         <title>Doggo-gram - Insertion Article</title>
@@ -45,6 +46,6 @@ require"Header.php";
 
 <?php
 
-require "Footer.php";
+require "footer.php";
 
 ?>
