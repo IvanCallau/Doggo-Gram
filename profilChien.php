@@ -90,7 +90,7 @@ $articles = $appli->getAllArticle($id);
                               </div>
 
                               <div class="nomChien col order-first order-lg-last text-center ">
-                                <p id ="résumé">' . $article->getTexteArticle() . '</p>
+                                <p>' . substr($article->getTexteArticle(),0,100) ."...". '</p>
                               </div>
                             </div>
                           </a>';
@@ -103,7 +103,7 @@ $articles = $appli->getAllArticle($id);
                               </div>
                           
                               <div class="nomChien col align-self-start text-center">
-                                <p id ="résumé" >' . $article->getTexteArticle() . '</p>
+                                <p >' . substr($article->getTexteArticle(),0,100) . "...". '</p>
                               </div>
                             </div>
                           </a>';
@@ -117,17 +117,3 @@ $articles = $appli->getAllArticle($id);
 include "footer.php";
 
 ?>
-<script>
-var text_court
-   
-   window.onload = function(){
-     text_court = document.getElementById("résumé").innerHTML;
-     document.getElementById("résumé").innerHTML = text_court.substring(0,60);
-   }
-
-   function rendre_court(){
-
-       document.getElementById("résumé").innerHTML = text_court;
-   }
-
-</script>

@@ -31,7 +31,14 @@ body{
 }
 .info{
     border: solid 2px;
+    margin-bottom:10px;
 }
+#photo{
+    margin-top: 5px;
+    max-width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    }
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
     #résumé{
