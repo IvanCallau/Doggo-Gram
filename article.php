@@ -5,7 +5,9 @@ session_start();
 if (isset($_SESSION['user_id'] )){
 	//barre de navigation pour utilisateur logged
 	include ("loggedHeader.php");
-    exit();
+}
+else {
+    include "header.php";
 }
 
 require "connexion.php";
@@ -13,8 +15,6 @@ require "connexion.php";
 $id = $_GET["id"];
 
 $appli = new Connexion();
-
-include "header.php";
 
 $appli = new Connexion();
 //récupération de l'article dans BDD
@@ -36,18 +36,16 @@ $commentaire = $appli->getAllCommentaire($_GET["id"]);
 
         <div class="ecran">
            
-        
-
-             
                 <?php  
           			
-                    echo '<div class="row justify-content-md-center"><p class="text-center col-lg-6">'.$article->getTexteArticle().'</p>'. "</div>"
+                    echo '<div class="row justify-content-md-center">
+                            <p class="text-center col-lg-6">
+                                '.$article->getTexteArticle().'
+                            </p>'. "</div>"
                         .'<div class="row justify-content-md-center"><p class="col-lg-5 text-right">' .$article->getDateParutionArticle().'</p></div>'; 
                     
                 ?>  
-                
-        
-            
+
            <form id="submit" method="post" action=<?php echo "submitCommentaire.php?id=".$id ?>>
             <section class="well">
                 <div class="form-group">
@@ -73,18 +71,15 @@ $commentaire = $appli->getAllCommentaire($_GET["id"]);
         
                  foreach ($commentaire as $value){
 
+                    echo '<p class="text-center col-lg-6">
+                                ' . $value->getIdUtilisateur() . '
+                            </p>';
+
                 echo '<div class="input-group">';
                     echo '<p>';
-                   
-                    
-                   
-                    
-                       echo $value->getTexteCommentaire().'</br>';
-              
-                            		
-                    
 
-                    
+                       echo $value->getTexteCommentaire().'</br>';
+
                     echo '</p>';
                 echo '</div>';
                 echo '<div class="text-right">';

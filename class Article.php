@@ -2,7 +2,7 @@
 
 class Article{
     private $id;
-    private $id_chien;
+    private $id_utilisateur;
     private $texteArticle;
     private $photoArticle;
     private $dateParutionArticle;
@@ -13,8 +13,8 @@ class Article{
     public function getId(){
         return $this->id;
     }
-    public function getId_chien(){
-        return $this->id_chien;
+    public function getId_Utilisateur(){
+        return $this->id_utilisateur;
     }
     public function getTexteArticle(){
         return $this->texteArticle;
