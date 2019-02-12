@@ -366,15 +366,16 @@ class Connexion{
 
 
     // Fonction d'insertion d'un nouveau commentaire.
-    public function insertCommentaire($id_article,$texteCommentaire, $dateParutionCommentaire) {
+    public function insertCommentaire($id_utilisateur,$id_article,$texteCommentaire, $dateParutionCommentaire) {
 
         $requete_prepare = $this->connexion->prepare(
-            "INSERT INTO commentaire (id_article,texte, dateParution)
-            VALUES (:id_article,:texteCommentaire, :dateParutionCommentaire)"
+            "INSERT INTO commentaire (id_utilisateur,id_article,texte, dateParution)
+            VALUES (:id_utilisateur,:id_article,:texteCommentaire, :dateParutionCommentaire)"
             );
             
         $requete_prepare->execute(
-            array('texteCommentaire' => $texteCommentaire,
+            array('id_utilisateur' => $id_utilisateur,
+                'texteCommentaire' => $texteCommentaire,
                 'dateParutionCommentaire' => $dateParutionCommentaire,
                 'id_article' =>$id_article)
             );
