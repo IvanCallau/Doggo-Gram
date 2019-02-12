@@ -29,7 +29,7 @@ $articles = $appli->getAllArticle($id);
     <div id="page" class="container">
         <?php
 
-        echo '<img src="' . $infosChien->getPhotoChien() . '" id="image" class="img-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12"  alt="beagle allongé avec une peluche"><br><br>';
+        echo '<img src="' . $infosChien->getPhotoChien() . '" id="image" class="img-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ><br><br>';
         
         ?>
         <div id="infoChien" class= "text-center">

@@ -29,6 +29,9 @@ body{
 #infoChien p span{
     display: inline-block;
 }
+.info{
+    border: solid 2px;
+}
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 576px) {
     #résumé{
@@ -38,6 +41,7 @@ body{
     .info{
         margin-bottom:10px;
     }
+   
 }
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
@@ -54,6 +58,7 @@ body{
     } 
     #photo{
         max-width: 100%;
+        object-fit: cover;
     }
 }
 
@@ -78,12 +83,14 @@ body{
     #image{
         margin-top:30px;
         max-height:450px;
+        object-fit: cover;
     }
     #infoChien{
         font-size: 25px;
     }
     #photo{
         min-width: 450px;
+        object-fit: cover;
     }
 }
 
