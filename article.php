@@ -57,7 +57,7 @@ $commentaire = $appli->getAllCommentaire($_GET["id"]);
                         Comment:
                     </label>
 
-                    <textarea name="texteCommentaire" class="form-control" onkeypress="pressEnter(event)" rows="3" id="comment"></textarea>
+                    <textarea name="texteCommentaire" type="text" class="form-control" wrap="hard"  rows="3" id="comment" required></textarea>
 
                    
 
@@ -98,12 +98,4 @@ $commentaire = $appli->getAllCommentaire($_GET["id"]);
 include "footer.php";
 
 ?>
-   <script>
-
-    function pressEnter(event) {
-        var code=event.which || event.keyCode; //Selon le navigateur c'est which ou keyCode
-        if (code==13) { //le code de la touche Enter
-            document.getElementById("submit").submit();
-        }
-    }
-     </script>
+  

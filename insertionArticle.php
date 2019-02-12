@@ -45,7 +45,7 @@ $id = $_GET["id"];
         <!-- la partie textarea  -->       
         <div id="textarea">
             <label for="contenu" id="center"><span id="contenu1"><strong>Contenu: </strong></span> 
-                <textarea id="contenu" type="text" name="contenu" wrap="hard" required></textarea>
+                <textarea id="contenu" type="text" name="contenu" required></textarea>
             </label>   
         </div>
         <!-- Le button de Valider -->
@@ -61,6 +61,4 @@ require "footer.php";
 
 ?>
 
-
-<script src="insertionArticle.js"></script>
 
