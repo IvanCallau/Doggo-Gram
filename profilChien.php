@@ -63,14 +63,27 @@ $articles = $appli->getAllArticle($id);
         </div>
 
         <div class= "text-center">
+
           <?php
 
-            echo '<a href="insertionArticle.php?id=' . $id . '">';
+          $id_user = null;
+
+          if (isset($_SESSION['user_id'] )){
+            
+            $id_user = $_SESSION['user_id'];
+            
+          }
+
+          if ($id_user == $infosChien->getId_utilisateur()) {
+
+            echo  '<a href="insertionArticle.php?id=' . $id . '">
+                    <button id="plus" class="btn btn-dark btn-circle btn-lg text-center">
+                      <span class="fas fa-plus-circle"></span>
+                    </button>
+                  </a>';
+          }
 
           ?>
-                <button id="plus" class="btn btn-dark btn-circle btn-lg text-center"><span class="fas fa-plus-circle"></span>
-                </button>
-            </a>
         </div>
 
         <div class="chien">
@@ -90,7 +103,7 @@ $articles = $appli->getAllArticle($id);
                               </div>
 
                               <div class="nomChien col order-first order-lg-last text-center ">
-                                <p>' . substr($article->getTexteArticle(),0,100) ."...". '</p>
+                                <p>' . substr($article->getTexteArticle(),0,70) ."...". '</p>
                               </div>
                             </div>
                           </a>';
@@ -103,7 +116,7 @@ $articles = $appli->getAllArticle($id);
                               </div>
                           
                               <div class="nomChien col align-self-start text-center">
-                                <p >' . substr($article->getTexteArticle(),0,100) . "...". '</p>
+                                <p >' . substr($article->getTexteArticle(),0,70) . "...". '</p>
                               </div>
                             </div>
                           </a>';
