@@ -1,49 +1,57 @@
-@media (min-width: 320px) and (max-width: 576px) {
-    .h3, h3 {
-        font-size: 9px;
-        margin-top: 38px;
-        margin-bottom: 30px;
-    }    
-    #contenu{
-        height: 100px;
-        margin-top: 13px;
-    }
-    #button{
-        text-align: center;
-    }
-    .center{
-        font-size: 12px;
-        border-radius: 12px;
-    }
-   
-  }
-@media (min-width: 768px) {
-    #grandir{
-        font-size: 48px;
-        margin-top: 7px;
-        margin-top: 80px;
-        text-align: center;
-    }
-    .input-group{
-        margin-left: 140px;
+.form-div{
+    margin-top: 50px;
+    text-align: center;
+}
+.input-label{
+    background: rgba(3, 88, 67, 0.89);
+    color: #fff;
+    padding: 30px;
+    transition: 0.5s;
+    border-radius: 5px;
+}
+.input-label:hover{
+    background: rgba(5, 116, 88, 0.89);
+    cursor: pointer;
+}
+.fas{
+    margin-right: 5px;
+}
 
-    }
-    #contenu{
-        height: 190px;
-        font-size: 53px;
-    }
-    #button{
-        text-align: center;
-    }
-    #button button{
-        font-size: 23px;
-        border-radius: 40px;
-        padding: 21px;
-    }
-    
-   
+#file{
+    display: none;
+}
+#contenu{
+    display: block;
+}
+#contenu1{
+    margin-bottom: 20px;
+}
+div{
+    text-align: center;
+}
+#center{
+    text-align: center;
+}
+#textarea{
+    font-size: 18px;
+    margin-top: 30px;
 }
 
 
 
 
+
+@media only screen and (max-width: 768px) {
+   #contenu{
+       width:300px;
+       height:180px;
+   }
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    #contenu{
+
+        width: 500px;
+        height: 180px;
+    }
+  }
