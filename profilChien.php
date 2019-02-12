@@ -2,6 +2,14 @@
 // Inisialisation de la session.
 session_start();
 
+if (isset($_SESSION['user_id'] )){
+	//barre de navigation pour utilisateur logged
+	include "loggedHeader.php";
+}else{
+   include 'header.php';
+}
+
+
 require('connexion.php');
 
 $appli = new Connexion();
@@ -11,7 +19,6 @@ $id = $_GET["id"];
 $infosChien = $appli->getInfosChien($id);
 $articles = $appli->getAllArticle($id);
 
-include "header.php";
 
 ?>
 
@@ -79,7 +86,7 @@ include "header.php";
                     echo '<a href="article.php?id='.$article->getId().'">
                             <div class="info row">
                               <div class="image col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                                <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
+                                <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid">
                               </div>
 
                               <div class="nomChien col order-first order-lg-last text-center ">
@@ -92,7 +99,7 @@ include "header.php";
                      echo '<a href="article.php?id='.$article->getId().'">
                             <div class="info row">
                               <div class="image  col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                                <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
+                                <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid">
                               </div>
                           
                               <div class="nomChien col align-self-start text-center">
