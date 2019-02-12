@@ -9,6 +9,7 @@ if (isset($_SESSION['user_id'] )){
 	include "header.php";
 }
 
+
 require "connexion.php";
 
 $id = $_GET["id"];

@@ -136,4 +136,5 @@ var text_court
        document.getElementById("résumé").innerHTML = text_court;
    }
 
+
 </script>

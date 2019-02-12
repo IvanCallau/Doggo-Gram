@@ -33,7 +33,6 @@ if(isset($_POST["prenom"])){
 
 
 
-
 header ("Location:http://127.0.1.17//projets/Doggo-Gram/profil.php?id=$id");
 exit();
 

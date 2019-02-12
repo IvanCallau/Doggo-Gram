@@ -108,7 +108,7 @@ $appli = new Connexion();
 						</h3>
 					</div>
 
-					<br>
+					</br>
 
 					<br>
 					

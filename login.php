@@ -11,7 +11,6 @@ $appli = new Connexion();
 // obtenir le pseudo entrée par une variable
 $pseudo = $_POST["pseudo"];
 
-
 //récupération du mot de passe entré
 $motDePasse = $_POST["motDePasse"];
 

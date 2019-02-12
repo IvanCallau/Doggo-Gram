@@ -5,7 +5,6 @@ session_start();
 if (isset($_SESSION['user_id'] )){
 	//barre de navigation pour utilisateur logged
 	include ("loggedHeader.php");
-    exit();
 }
 
 require "connexion.php";

@@ -6,6 +6,7 @@ $appli = new Connexion();
 
 $id = $_GET["id"];
 
+
 // Récupère les données insérées dans inscriptionChien.php selon leurs "name".
 $race = $_POST["race"];
 $surnom = $_POST["surnom"];

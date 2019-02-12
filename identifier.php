@@ -8,7 +8,6 @@ if (isset($_SESSION['user_id'] )){
  
 require ("connexion.php");
 
-
 $appli = new Connexion();
 
 include "header.php";

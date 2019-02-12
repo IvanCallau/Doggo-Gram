@@ -186,7 +186,6 @@ class Connexion{
             return $commentaire;
     }
 
-   
     public function getAllCommentaire($id){
         $requete = $this->connexion->prepare(
            "SELECT c.id,c.id_utilisateur,c.id_article,c.texte AS texteCommentaire,c.dateParution as dateParutionCommentaire,
