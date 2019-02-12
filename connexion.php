@@ -210,6 +210,18 @@ class Connexion{
                 
         echo $str;
     }
+/*
+    public function getPseudoByComment($id_commentaire) {
+
+        $requete = $this->connexion->prepare(
+            "SELECT *
+            FROM utilisateur u
+            INNER JOIN commentaire connexion
+            ON u.id = c.id_utilisateur
+            WHERE u.id = :id_commentaire");
+
+        $requete->execute(array( "id_commentaire" => $id );)
+    }
 
 
 /*     Rahmat fin de relation entre les tables commentaire et article */ 
@@ -372,7 +384,7 @@ class Connexion{
             "INSERT INTO commentaire (id_utilisateur,id_article,texte, dateParution)
             VALUES (:id_utilisateur,:id_article,:texteCommentaire, :dateParutionCommentaire)"
             );
-            
+
         $requete_prepare->execute(
             array('id_utilisateur' => $id_utilisateur,
                 'texteCommentaire' => $texteCommentaire,

@@ -1,8 +1,18 @@
 <?php
 
+session_start();
+
+$id_user = null;
+
+if (isset($_SESSION['user_id'] )){
+	
+	$id_user = $_SESSION['user_id'];
+}
+
 require "connexion.php";
 
 $id = $_GET["id"];
+
 
 $appli = new Connexion();
 
@@ -12,8 +22,8 @@ var_dump ($texteCommentaire);
 $dateParutionCommentaire = date("Y-m-d");
 var_dump ($dateParutionCommentaire);
 
-$insertCommentaire = $appli->insertCommentaire($id,$texteCommentaire, $dateParutionCommentaire);
+$insertCommentaire = $appli->insertCommentaire($id_user,$id,$texteCommentaire, $dateParutionCommentaire);
 
-header ("Location:http://127.0.1.17//projets/Doggo-Gram/article.php?id=$id");
+header ("Location:article.php?id=$id");
 exit();
 ?>

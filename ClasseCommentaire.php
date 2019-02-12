@@ -13,7 +13,7 @@ class Commentaire{
     public function getId(){
         return $this->id;
     }
-    public function getIdUtilisateur(){
+    public function getId_utilisateur(){
         return $this->id_utilisateur;
     }
     public function getIdArticle(){

@@ -2,9 +2,13 @@
 // Initialisation de la session.
 session_start();
 
+$id_user = null;
+    
 if (isset($_SESSION['user_id'] )){
 	//barre de navigation pour utilisateur logged
 	include ("loggedHeader.php");
+
+    $id_user = $_SESSION['user_id'];
 }
 else {
     include "header.php";
@@ -65,31 +69,22 @@ $commentaire = $appli->getAllCommentaire($_GET["id"]);
                 </div>
                 </form>
 
-            <div style = "max-height:300px; overflow:scroll;">
+            <div style = "max-height:500px; overflow:scroll;">
 
                 <?php
         
                  foreach ($commentaire as $value){
 
-                    echo '<p class="text-center col-lg-6">
-                                ' . $value->getIdUtilisateur() . '
-                            </p>';
-
+                echo '<p class="text-center col-lg-6">' . $value->getId_utilisateur() . '</p>';
                 echo '<div class="input-group">';
-                    echo '<p>';
-
-                       echo $value->getTexteCommentaire().'</br>';
-
-                    echo '</p>';
+                echo '<p>';
+                echo $value->getTexteCommentaire().'</br>';
+                echo '</p>';
                 echo '</div>';
                 echo '<div class="text-right">';
-                   echo '<p>'; 
-                   
-                
-                    echo $value->getDateParutionCommentaire().'</br>';
-                    
-                    
-                   echo '</p>';
+                echo '<p>'; 
+                echo $value->getDateParutionCommentaire().'</br>';
+                echo '</p>';
                 echo '</div>';
                  }
                  ?>

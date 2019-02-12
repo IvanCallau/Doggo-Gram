@@ -72,7 +72,7 @@ $appli = new Connexion();
 					</div>
 
 					<div class="champs gender col-12 col-sm-12">
-				        <input id="bouton1" type="radio" name="gender" value="Mâle">
+				        <input id="bouton1" type="radio" name="gender" value="Mâle" required>
 							<label for="bouton1">
 								<div class="genre">
 									Mâle
@@ -80,7 +80,7 @@ $appli = new Connexion();
 							</label>
 						</input>
 						
-						<input id="bouton2" type="radio" name="gender" value="Femelle">
+						<input id="bouton2" type="radio" name="gender" value="Femelle" required>
 							<label for="bouton2">
 								<div class="genre">
 									Femelle
@@ -90,9 +90,14 @@ $appli = new Connexion();
 					</div>
 
 					<div class="champs col-12 col-sm-12">
-						<h3>
-							Date de naissance:<input id="naissance" type="date" class="barre" name="naissance" required>
-						</h3>
+						<?php
+
+						$date = new DateTime('today');
+
+						echo '<h3>
+								Date de naissance:<input id="naissance" type="date" class="barre" name="naissance" min="1994-12-31" max="$date" required>
+							  </h3>';
+						?>
 				    </div>
 
 					<br>
