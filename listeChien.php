@@ -5,22 +5,13 @@ session_start();
 if (isset($_SESSION['user_id'] )){
 	//barre de navigation pour utilisateur logged
 	include ("loggedHeader.php");
+}else{
+   include 'header.php';
 }
 
 require "connexion.php";
 
 $appli = new Connexion();
-
-//$toutLesChiens = $appli->getAllChiens();
-
-
-//session_start();
-//if (isset($_SESSION['user_id'] )) {
- // include "HeaderLogued.php";
-//} else {
-//  include "HeaderAnonyme.php";
-//}
- include 'header.php';
 
  $pattern = "";
  // Si mon pattern existe et est rempli
