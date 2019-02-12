@@ -2,11 +2,35 @@
 // Initialisation de la session.
 session_start();
 
+require "connexion.php";
+
+$appli = new Connexion();
+
+if (isset($_GET["id"])) {
+
+    //récupération de l'article dans BDD
+    $article = $appli->getArticle($_GET["id"]);
+
+    if ($article) {
+
+        $result= intval($article->getId());
+
+    }
+    else {
+        echo "Cet article n'existe pas.";
+
+        die();
+    }
+
+}
+
+$id = $_GET["id"];
+
 $id_user = null;
     
 if (isset($_SESSION['user_id'] )){
-	//barre de navigation pour utilisateur logged
-	include ("loggedHeader.php");
+    //barre de navigation pour utilisateur logged
+    include ("loggedHeader.php");
 
     $id_user = $_SESSION['user_id'];
 }
@@ -14,15 +38,7 @@ else {
     include "header.php";
 }
 
-require "connexion.php";
 
-$id = $_GET["id"];
-
-$appli = new Connexion();
-
-$appli = new Connexion();
-//récupération de l'article dans BDD
-$article = $appli->getArticle($_GET["id"]);
 //récupération des commentaires dans BDD
 $commentaire = $appli->getAllCommentaire($_GET["id"]);
 

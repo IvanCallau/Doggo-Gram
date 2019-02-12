@@ -2,23 +2,37 @@
 // Inisialisation de la session.
 session_start();
 
-if (isset($_SESSION['user_id'] )){
-	//barre de navigation pour utilisateur logged
-	include "loggedHeader.php";
-}else{
-   include 'header.php';
-}
-
-
-require('connexion.php');
+require "connexion.php";
 
 $appli = new Connexion();
 
+if (isset($_GET["id"])) {
+
+    $infosChien = $appli->getInfosChien($_GET["id"]);
+    $articles = $appli->getAllArticle($_GET["id"]);
+
+    if ($infosChien) {
+
+        $result = intval($infosChien->getId());
+
+    }
+    else {
+        echo "Ce chien n'existe pas.";
+
+        die();
+    }
+
+}
+
 $id = $_GET["id"];
 
-$infosChien = $appli->getInfosChien($id);
-$articles = $appli->getAllArticle($id);
-
+if (isset($_SESSION['user_id'] )){
+	//barre de navigation pour utilisateur logged
+	include "loggedHeader.php";
+}
+else {
+   include 'header.php';
+}
 
 ?>
 
@@ -71,7 +85,7 @@ $articles = $appli->getAllArticle($id);
           if (isset($_SESSION['user_id'] )){
             
             $id_user = $_SESSION['user_id'];
-            
+
           }
 
           if ($id_user == $infosChien->getId_utilisateur()) {
