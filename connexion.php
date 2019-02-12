@@ -188,11 +188,13 @@ class Connexion{
 
     public function getAllCommentaire($id){
         $requete = $this->connexion->prepare(
-           "SELECT c.id,c.id_utilisateur,c.id_article,c.texte AS texteCommentaire,c.dateParution as dateParutionCommentaire,
+           "SELECT DISTINCT c.id, u.pseudo as auteur,c.id_article,c.texte AS texteCommentaire,c.dateParution as dateParutionCommentaire,
                    a.id,a.id_chien,a.texte as texteArticle,a.photo as photoArticle,a.dateParution as dateParutionArticle
             FROM commentaire c
             INNER JOIN article a
             ON c.id_article = a.id
+            INNER JOIN utilisateur u
+            ON u.id = c.id_utilisateur
             WHERE c.id_article = :id
             ORDER BY c.id DESC");
             $requete->execute(array("id" => $id));
@@ -209,18 +211,6 @@ class Connexion{
                 .$commentaire->getDateParutionCommentaire()." ";
                 
         echo $str;
-    }
-/*
-    public function getPseudoByComment($id_commentaire) {
-
-        $requete = $this->connexion->prepare(
-            "SELECT *
-            FROM utilisateur u
-            INNER JOIN commentaire connexion
-            ON u.id = c.id_utilisateur
-            WHERE u.id = :id_commentaire");
-
-        $requete->execute(array( "id_commentaire" => $id );)
     }
 
 
