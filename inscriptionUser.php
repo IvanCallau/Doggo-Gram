@@ -104,7 +104,9 @@ $appli = new Connexion();
 					
 					<div class="champs col-12">
 						<h3 class="">
-							Mot De Passe:<input type="password" id="password" class="barre" name="motDePasse" minlength="8" required />
+							Mot De Passe:<input type="password" id="password" class="barre" name="motDePasse" minlength="8" required 
+								oninvalid="this.setCustomValidity('8 charactères minimum!')"
+    							oninput="this.setCustomValidity('')"/>
 						</h3>
 					</div>
 

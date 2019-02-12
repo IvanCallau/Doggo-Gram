@@ -36,10 +36,13 @@ include "header.php";
             $age_mois = $diff->m;
 
             if ($age_annees < 1) {
-              $age = $age_mois;
+              $age = "$age_mois Mois";
+            }
+            else if ($age_annees == 1) {
+              $age = "$age_annees An";
             }
             else {
-              $age = $age_annees;
+              $age = "$age_annees Ans";
             }
 
             if ($age_mois < 1) {
@@ -66,8 +69,6 @@ include "header.php";
         <div class="chien">
             <?php
 
-
-
             $row = 0;
 
             foreach ($articles as $article) {
@@ -75,47 +76,34 @@ include "header.php";
                 $row += 1;
 
                 if ($row % 2 == 0) {
-                    echo '
+                    echo '<a href="article.php?id='.$article->getId().'">
                             <div class="info row">
+                              <div class="image col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
+                                <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
+                              </div>
 
-                                <div class="image col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                                
-                                  <a href="article.php?id='.$article->getId().'">
-                                  <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
-                               </a>
-                               </div>
-
-                                <div class="nomChien col order-first order-lg-last text-center ">
-                                <div style = "max-height:155px; overflow:scroll">
-                                    <p id ="résumé">' . $article->getTexteArticle() . '</p>
-                                </div>
-                                </div>
-
-                            </div>'
-                        ;
+                              <div class="nomChien col order-first order-lg-last text-center ">
+                                <p id ="résumé">' . $article->getTexteArticle() . '</p>
+                              </div>
+                            </div>
+                          </a>';
                 }
                 else {
-                     echo 
-                            '<div class="info row">
-                           
-                                <div class="image  col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
-                                    <a href="article.php?id='.$article->getId().'">
-                                     <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
-                                    </a> 
-                                </div>
-                            
-
-                                <div class="nomChien col align-self-start text-center">
-                                <div style = "max-height:155px; overflow:scroll">
+                     echo '<a href="article.php?id='.$article->getId().'">
+                            <div class="info row">
+                              <div class="image  col-6 col-sm-6 col-md-6 col-lg-12 col-xl-12 text-center">
+                                <img id="photo" src="' . $article->getPhotoArticle() . '" class="img-fluid" alt="petit chiot">
+                              </div>
+                          
+                              <div class="nomChien col align-self-start text-center">
                                 <p id ="résumé" >' . $article->getTexteArticle() . '</p>
-                                </div>
-                                </div>
-                            </div>'
-                      ;
+                              </div>
+                            </div>
+                          </a>';
                 }
             }
             ?>     
-    </div>
+        </div>
 
 <?php
 
@@ -126,15 +114,13 @@ include "footer.php";
 var text_court
    
    window.onload = function(){
-       
-       text_court = document.getElementById("résumé").innerHTML;
-       document.getElementById("résumé").innerHTML = text_court.substring(0,100)+'<span style="color:blue;cursor:pointer;" onclick="rendre_court()">...suite<span>';
+     text_court = document.getElementById("résumé").innerHTML;
+     document.getElementById("résumé").innerHTML = text_court.substring(0,60);
    }
 
    function rendre_court(){
 
        document.getElementById("résumé").innerHTML = text_court;
    }
-
 
 </script>
