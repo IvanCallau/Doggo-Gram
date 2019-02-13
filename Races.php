@@ -18,6 +18,8 @@
 
 <option value="Bulldog">Bulldog</option>
 
+<option value="Bull Terrier">Bull Terrier</option>
+
 <option value="Caniche">Caniche</option>
 
 <option value="Chow-Chow">Chow-Chow</option>
