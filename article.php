@@ -92,8 +92,9 @@ $commentaire = $appli->getAllCommentaire($_GET["id"]);
                     </form>
 
                     <div style = "max-height:500px; overflow:scroll;">';
-        
-                    foreach ($commentaire as $value){
+                }
+
+                foreach ($commentaire as $value){
 
                         echo '<div class="input-group">
                                 <p>' . $value->getAuteur() . ':&nbsp&nbsp&nbsp' . $value->getTexteCommentaire() . '</br>
@@ -104,7 +105,6 @@ $commentaire = $appli->getAllCommentaire($_GET["id"]);
                                 <p>' . $value->getDateParutionCommentaire() . '</br>
                                 </p>
                               </div>';
-                    }
                 }
 
                 ?>
