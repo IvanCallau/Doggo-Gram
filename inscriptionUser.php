@@ -40,7 +40,7 @@ $appli = new Connexion();
 					</div>
 
 					<div>
-						<a href="identifier.php">
+						<a href="identifier.php?erreur=0">
 							S'identifier
 						</a>
 					</div>

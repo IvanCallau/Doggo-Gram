@@ -23,6 +23,19 @@ include "header.php";
 		<div id="page">
 			<div id="formulaire" class="container">
 				<form method="POST" name="login" action="login.php">
+
+				<?php
+					/*alerte si pseudo est faux*/
+					$erreur = $_GET["erreur"];
+					if($erreur==1){
+						echo '<div class="alert alert-danger">
+								<strong>Pseudo ou mot de passe inexistant!</strong> 
+					  		 </div>';
+					}
+				
+				?>
+
+
 					<div class="champs col-12">
 						<label id="pseudo">
 							<h3 class="">

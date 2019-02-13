@@ -31,7 +31,7 @@
                     </li>
           
                     <li class="nav-item active">
-                        <a class="nav-link" href="identifier.php">
+                        <a class="nav-link" href="identifier.php?erreur=0">
                             S'indentifié
                         </a>
                     </li>
@@ -44,7 +44,7 @@
 
                             <div class="dropdown-divider"></div>
 
-                            <a class="dropdown-item" href="identifier.php">
+                            <a class="dropdown-item" href="identifier.php?erreur=0">
                                 S'identifié
                             </a>
                         </div>

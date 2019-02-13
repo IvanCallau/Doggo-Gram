@@ -42,7 +42,7 @@ session_start();
 
     </br>
 
-    <a href="identifier.php">
+    <a href="identifier.php?erreur=0">
       <button type="button" class="button3">S'identifier</button>
     </a>
   </div>
