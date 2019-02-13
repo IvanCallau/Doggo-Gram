@@ -41,11 +41,12 @@ else {
   <link href="profilChien.css" rel="stylesheet">
 
     <div id="page" class="container">
-        <?php
 
-        echo '<img src="' . $infosChien->getPhotoChien() . '" id="image" class="img-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ><br><br>';
-        
+        <?php
+        echo '<img src="' . $infosChien->getPhotoChien() . '"id="image" class="img-fluid mx-auto d-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ><br><br>';
         ?>
+   
+
         <div id="infoChien" class= "text-center">
             <?php
 
