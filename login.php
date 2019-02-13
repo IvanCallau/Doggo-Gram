@@ -10,10 +10,7 @@ $appli = new Connexion();
 
 // obtenir le pseudo entrée par une variable
 $pseudo = $_POST["pseudo"];
-if($appli->isLoginExists($pseudo)){
-    header ("Location: identifier.php?erreur=1");
-    exit();
-}
+
 //récupération du mot de passe entré
 $motDePasse = $_POST["motDePasse"];
 
@@ -21,6 +18,15 @@ $motDePasse = $_POST["motDePasse"];
 $utilisateur = $appli->getAllInfosUtilisateur($pseudo);
 
 $utilisateurMdpBDD = $utilisateur->motDePasse;
+
+if($appli->isLoginExists($pseudo)){
+	$_SESSION['user_id'] = $utilisateur->id;
+	header ("Location: profil.php");
+}
+else {
+    header ("Location: identifier.php?erreur=1");
+    exit();
+}
 
 if(password_verify($motDePasse, $utilisateurMdpBDD)) {
     echo 'OK';
