@@ -20,6 +20,8 @@
 
 <option value="Caniche">Caniche</option>
 
+<option value="Cocker">Chow-Chow</option>
+
 <option value="Cocker">Cocker</option>
 
 <option value="Corgi">Corgi</option>
