@@ -1,0 +1,19 @@
+
+img {
+	min-width:280px;
+	display:block;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+a {
+	font-size:30px;
+}
+
+div {
+	min-width:280px;
+	align-items:center;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
