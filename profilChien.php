@@ -43,7 +43,7 @@ else {
     <div id="page" class="container">
 
         <?php
-        echo '<img src="' . $infosChien->getPhotoChien() . '"id="image" class="img-fluid mx-auto d-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ><br><br>';
+        echo '<img src="' . $infosChien->getPhotoChien() . '" id="image" class="img-fluid mx-auto d-block col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" ><br>';
         ?>
    
 
