@@ -4,7 +4,7 @@ session_start();
 
 if (!isset($_SESSION['user_id'] )){
     //si pas loger alors redirection page identifier
-    header ("Location:identifier.php");
+    header ("Location:identifier.php?erreur=0");
     exit();
 }
 
@@ -59,7 +59,9 @@ $id = $_GET["id"];
             <button type="submit" class="btn btn-primary center">Valider</button>
         </div>
                     
-    </form>     
+    </form>
+
+    <script src="insertionArticle.js"></script>
  
 <?php
 
