@@ -17,13 +17,18 @@
    
 }
 .nomChien{
-    margin-left:10px;
-    margin-right:10px;
+    margin-left:-15px;
+    padding-left:-15px;
+    text-align:center;
+}
+.image{
+    margin-left:-15px;
+    padding-left:-15px;
 }
 img.img-responsive{
-   max-width: 191px;
+   max-width: 180px;
    height: 130px;
-   object-fit: cover;
+   object-fit:fill;
 }
 
 /*pour small screen*/

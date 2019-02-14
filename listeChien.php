@@ -39,12 +39,12 @@ $appli = new Connexion();
 
          echo ' <a href="profilChien.php?id=' . $unChien->id . '">
                   <div class="info">
-                    <div class="image">
+                    <div class="image col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
                       <img src="' . $unChien->photo . '" class="img-responsive" alt="petit chiot">
                     </div>
 
-                    <div class="nomChien">
-                      <h3>' . $unChien->surnom . '</h3>
+                    <div class="nomChien col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                      <h4>' . $unChien->surnom . '</h4>
                     </div>
                   </div>
                 </a>';
