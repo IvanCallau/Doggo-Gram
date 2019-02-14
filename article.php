@@ -17,9 +17,9 @@ if (isset($_GET["id"])) {
 
     }
     else {
-        echo "Cet article n'existe pas.";
+        header ("Location:PageErreur.html");
 
-        die();
+        exit();
     }
 
 }

@@ -17,9 +17,9 @@ if (isset($_GET["id"])) {
 
     }
     else {
-        echo "Ce chien n'existe pas.";
+        header ("Location:PageErreur.html");
 
-        die();
+        exit();
     }
 
 }
