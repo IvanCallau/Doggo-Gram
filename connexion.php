@@ -451,7 +451,7 @@ class Connexion{
             "SELECT * FROM chien WHERE LOWER(race) LIKE LOWER(:race)
         OR LOWER(surnom) LIKE LOWER(:surnom)"
             );
-        $requete_prepare ->execute (array("race"=>"%$pattern%","surnom"=>"%$pattern%"));
+        $requete_prepare ->execute (array("race"=>"$pattern%","surnom"=>"$pattern%"));
         $resultat=$requete_prepare->fetchAll(PDO::FETCH_OBJ);
         
         return $resultat;
