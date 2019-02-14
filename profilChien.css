@@ -10,12 +10,10 @@ body{
     color:black;
 }
 #image{
-    margin-top:10px; 
-    max-height: 380px;
-    width: 750px;
-    object-fit: cover;
+    margin-top:10px;
+    max-height:500px;
+    object-fit:contain;
 }
-
 .chien{
     margin-top:20px;  
 }
@@ -59,7 +57,7 @@ body{
         font-size: 15px;
         padding-top:10%;
     } 
-    }
+}
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) { 
     #résumé{
@@ -91,9 +89,7 @@ body{
         padding-top:10px;
     }  
     #image{
-        margin-top:30px;
-        max-height:450px;
-        object-fit: cover;
+        margin-top:20px;
     }
     #infoChien{
         font-size: 25px;
