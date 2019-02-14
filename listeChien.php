@@ -45,10 +45,9 @@ $appli = new Connexion();
 
                     <div class="nomChien">
                       <h3>' . $unChien->surnom . '</h3>
-                      </div>
-
-                      </div>
-                      </a>';
+                    </div>
+                  </div>
+                </a>';
         
 
       }
