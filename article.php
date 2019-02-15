@@ -76,7 +76,7 @@ $commentaire = $appli->getAllCommentaire($_GET["id"]);
                             <section class="well">
                                 <div class="form-group">
                                     <label for="comment"  class="text-left">
-                                        Comment:
+                                        Commentaire:
                                     </label>
 
                             <textarea name="texteCommentaire" type="text" class="form-control" wrap="hard"  rows="3" id="comment" required></textarea>
