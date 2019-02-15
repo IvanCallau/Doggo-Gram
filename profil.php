@@ -29,7 +29,7 @@ $infos = $appli->getMesChiens($id);
     <div class="container">
 
             <!-- La partie Noms -->
-        <form method="post" action=<?php echo "update.php?id=".$id ?>>
+        <form method="post" action=<?php echo "profil.php?id=".$id ?>>
             <div class="jumbotron mt-3">
                 <div class="row">
                     <div class="col-2">
