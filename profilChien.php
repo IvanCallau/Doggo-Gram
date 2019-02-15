@@ -72,7 +72,7 @@ else {
             }
 
 
-            echo "<p><span><strong>Surnom:</strong>" . $infosChien->getSurnom() . "</span><span><strong>Age:</strong>" . $age . "</span><span><strong>Nom d'élevage:</strong>" . $infosChien->getNomElevage() . "</span><span><strong>Race:</strong>" . $infosChien->getRace() . "</span><span><strong>Sexe:</strong>" . $infosChien->getSexe() . "</span></p>";
+            echo "<span><strong>Surnom:</strong>" . $infosChien->getSurnom() . "</span>&nbsp&nbsp<span><strong>Age:</strong>" . $age . "</span><br><span><strong>Nom d'élevage:</strong>" . $infosChien->getNomElevage() . "</span>&nbsp&nbsp<span><strong>Race:</strong>" . $infosChien->getRace() . "</span>&nbsp&nbsp<span><strong>Sexe:</strong>" . $infosChien->getSexe() . "</span>";
 
             ?>
         </div>
